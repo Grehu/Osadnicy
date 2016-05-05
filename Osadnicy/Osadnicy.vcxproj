@@ -116,7 +116,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Gra.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="MainWindow.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Gra.hpp" />
+    <ClInclude Include="PoleLeaf.h" />
+    <ClInclude Include="PoleWartosciLeaf.h" />
+    <ClInclude Include="RamkaLeaf.hpp" />
+    <ClInclude Include="RysunekComponent.hpp" />
+    <ClInclude Include="RysunekComposite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

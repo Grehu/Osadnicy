@@ -13,10 +13,72 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Grafika">
+      <UniqueIdentifier>{dc27c22f-7bc5-4fad-8083-e6a634bab2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grafika\Karty">
+      <UniqueIdentifier>{ba71781d-5182-4cb9-8329-2cd685fed18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grafika\Plansza">
+      <UniqueIdentifier>{def0d0f9-243b-4e7f-94e3-30bc112ef2cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik">
+      <UniqueIdentifier>{01d24361-46ba-49bd-bd26-a0d2ffd44e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik\Okna">
+      <UniqueIdentifier>{2fea1481-d660-4e9d-af1f-6a53fc74fb54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik\Stany">
+      <UniqueIdentifier>{1bef3949-1440-4040-8c64-6237d2ec1e1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika">
+      <UniqueIdentifier>{46fcfee5-1f76-4d61-abdf-1e019f9bea49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik">
+      <UniqueIdentifier>{8502830e-a587-4832-8c15-b5704db30908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika\Karty">
+      <UniqueIdentifier>{57f05bca-d4b8-4984-ad82-909825707890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika\Plansza">
+      <UniqueIdentifier>{66b73ebd-5ab6-4e84-b0a7-77db551026a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik\Stany">
+      <UniqueIdentifier>{7399d62e-0882-4566-aa29-ebb20020ff07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik\Okna">
+      <UniqueIdentifier>{4d18e599-654e-41f3-9cd9-6042736fe76f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gra.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="PoleLeaf.h">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleWartosciLeaf.h">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="RamkaLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComponent.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Gra.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComposite.h">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
