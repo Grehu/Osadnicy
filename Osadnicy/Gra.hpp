@@ -1,6 +1,5 @@
 #pragma once
 #include <SFML\Graphics.hpp>
-#include <map>
 
 using namespace std;
 //using namespace sf;
@@ -12,5 +11,5 @@ struct Koordynaty {
 
 class Gra {
 private:
-	unordered_map<Koordynaty, PoleComposite> plansza;
+	map::unordered_map<Koordynaty, PoleComposite> plansza;
 };

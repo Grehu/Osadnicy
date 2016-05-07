@@ -1,3 +1,7 @@
-﻿  main.cpp
+﻿  PoleWartosciLeaf.cpp
+  Generating Code...
+  Skipping... (no relevant changes detected)
+  RysunekComposite.cpp
+sfml-main-d.lib(MainWin32.cpp.obj) : warning LNK4099: PDB 'vc140.pdb' was not found with 'sfml-main-d.lib(MainWin32.cpp.obj)' or at 'F:\VisualCPPWorkspace\Osadnicy\Debug\vc140.pdb'; linking object as if no debug info
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.exe
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.pdb (Partial PDB)

@@ -116,17 +116,38 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BudynekLeaf.cpp" />
+    <ClCompile Include="DrogaLeaf.cpp" />
     <ClCompile Include="Gra.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="PoleLeaf.cpp" />
+    <ClCompile Include="PoleWartosciLeaf.cpp" />
+    <ClCompile Include="PortLeaf.cpp" />
+    <ClCompile Include="RysunekComponent.cpp" />
+    <ClCompile Include="RysunekComposite.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BudynekLeaf.h" />
+    <ClInclude Include="DrogaLeaf.hpp" />
+    <ClInclude Include="Efekt.hpp" />
     <ClInclude Include="Gra.hpp" />
-    <ClInclude Include="PoleLeaf.h" />
-    <ClInclude Include="PoleWartosciLeaf.h" />
+    <ClInclude Include="Gracz.hpp" />
+    <ClInclude Include="Karta.hpp" />
+    <ClInclude Include="Pole.hpp" />
+    <ClInclude Include="PoleLeaf.hpp" />
+    <ClInclude Include="PoleWartosciLeaf.hpp" />
+    <ClInclude Include="Port.hpp" />
+    <ClInclude Include="PortLeaf.hpp" />
     <ClInclude Include="RamkaLeaf.hpp" />
     <ClInclude Include="RysunekComponent.hpp" />
-    <ClInclude Include="RysunekComposite.h" />
+    <ClInclude Include="RysunekComposite.hpp" />
+    <ClInclude Include="Surowiec.hpp" />
+    <ClInclude Include="Sytuacja.hpp" />
+    <ClInclude Include="Zlodziej.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

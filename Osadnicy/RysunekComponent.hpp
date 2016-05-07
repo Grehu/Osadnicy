@@ -2,13 +2,13 @@
 #include <SFML/Graphics.hpp>
 
 using namespace sf;
-using namespace std;
 
 class RysunekComponent {
-private: 
+protected: 
 	Sprite sprite;
-	Vector2f lokalizacja;
+	Vector2f * pozycja;
 public:
+	void ustawPozycje(Vector2f & pozycja);
 	void ustawSprite(Sprite & sprite);
-	void rysuj(RenderWindow & okno);
+	virtual void rysuj(RenderWindow & okno);
 };
