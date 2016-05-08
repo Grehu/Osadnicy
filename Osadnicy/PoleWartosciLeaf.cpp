@@ -1,5 +1,6 @@
 #include "PoleWartosciLeaf.hpp"
 
+
 void PoleWartosciLeaf::nadajZlodziejowiGrafike(Sprite & sprite)
 {
 	zlodziejGrafika = &sprite;
@@ -22,9 +23,14 @@ void PoleWartosciLeaf::zdejmijZlodzieja()
 
 void PoleWartosciLeaf::rysuj(RenderWindow okno)
 {
-	RysunekComponent::rysuj(okno);
+	this->sprite.setPosition(*pozycja);
+	this->sprite.move(Vector2f(128.0f, 128.0f));
+	okno.draw(sprite);
 	text.setPosition(*pozycja);
+	//text.move(Vector2f(128.0f, 128.0f));
 	if (zlodziej) {
+		zlodziejGrafika->setPosition(*pozycja);
+		zlodziejGrafika->move(Vector2f(128.0f, 128.0f));
 		okno.draw(*zlodziejGrafika);
 	}
 }

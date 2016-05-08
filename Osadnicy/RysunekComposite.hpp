@@ -6,7 +6,7 @@
 
 using namespace sf;
 
-class RysunekComposite : RysunekComponent {
+class RysunekComposite : public RysunekComponent {
 private:
 	RysunekComponent * pole;
 	RysunekComponent * poleWartosci;
@@ -15,5 +15,5 @@ public:
 	void ustawPole(PoleLeaf & pole);
 	void ustawWartosc(PoleWartosciLeaf & poleWartosci);
 	void ustawRamke(RamkaLeaf & ramka);
-	void rysuj(RenderWindow okno);
+	void rysuj(RenderWindow & okno);
 };

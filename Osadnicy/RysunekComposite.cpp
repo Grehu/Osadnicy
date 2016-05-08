@@ -15,7 +15,8 @@ void RysunekComposite::ustawRamke(RamkaLeaf & ramka)
 	this->ramka = &ramka;
 }
 
-void RysunekComposite::rysuj(RenderWindow okno)
+
+void RysunekComposite::rysuj(RenderWindow & okno)
 {
 	pole->ustawPozycje(*pozycja);
 	poleWartosci->ustawPozycje(*pozycja);

@@ -3,10 +3,10 @@
 void PoleLeaf::rysuj(RenderWindow & okno)
 {
 	if (sprawdzPunkt(okno)) {
-		sprite.setColor(Color(255, 255, 200, 255));
+		sprite.setColor(Color(255, 255, 255, 255));
 	}
 	else {
-		sprite.setColor(Color(255, 255, 255, 255));
+		sprite.setColor(Color(128, 128, 128, 255));
 	}
 	RysunekComponent::rysuj(okno);
 }
