@@ -6,6 +6,7 @@
 class DrogaLeaf : public BudynekLeaf {
 private:
 	int orientacja;
+	
 	bool zbudowane = false;
 public:
 	void ustawOrientacje(int orientacja);

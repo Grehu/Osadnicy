@@ -55,7 +55,9 @@ int main() {
 	font.loadFromFile("Squares Bold Free.otf");
 	Text text;
 	text.setFont(font);
-	text.setString("6.");
+	text.setCharacterSize(56);
+	text.setColor(Color(0, 0, 0));
+	text.setString("8");
 
 	//RysunekComponent (* rysunek)[4];
 
@@ -97,12 +99,6 @@ int main() {
 		}
 		//tu Twój kod
 		oknoAplikacji.clear(Color::White);
-		//lasKsztalt.setPosition(polozenieD);
-		//oknoAplikacji.draw(lasKsztalt);
-		//oknoAplikacji.draw(text);
-		//oknoAplikacji.draw(text);
-		//oknoAplikacji.draw(ramkaKsztalt);
-		//oknoAplikacji.draw(lasKsztalt);
 		kompozyt.rysuj(oknoAplikacji);
 		oknoAplikacji.display();
 	}

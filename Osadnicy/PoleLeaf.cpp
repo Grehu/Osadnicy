@@ -1,7 +1,9 @@
 #include "PoleLeaf.hpp"
 
+
 void PoleLeaf::rysuj(RenderWindow & okno)
 {
+
 	if (sprawdzPunkt(okno)) {
 		sprite.setColor(Color(255, 255, 255, 255));
 	}

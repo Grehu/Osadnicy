@@ -5,6 +5,11 @@ void BudynekLeaf::zbuduj()
 	zbudowane = true;
 }
 
+void BudynekLeaf::ustawKolor(Color kolor)
+{
+	this->kolor = kolor;
+}
+
 void BudynekLeaf::rysuj(RenderWindow & okno)
 {
 	if (zbudowane) {

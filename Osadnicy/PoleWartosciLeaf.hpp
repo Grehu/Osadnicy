@@ -15,5 +15,5 @@ public:
 	void przypiszText(Text & text);
 	void ustawZlodzieja();
 	void zdejmijZlodzieja();
-	void rysuj(RenderWindow okno);
+	void rysuj(RenderWindow & okno);
 };

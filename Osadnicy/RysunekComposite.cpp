@@ -1,5 +1,6 @@
 #include "RysunekComposite.hpp"
 
+
 void RysunekComposite::ustawPole(PoleLeaf & pole)
 {
 	this->pole = &pole;
@@ -18,6 +19,7 @@ void RysunekComposite::ustawRamke(RamkaLeaf & ramka)
 
 void RysunekComposite::rysuj(RenderWindow & okno)
 {
+
 	pole->ustawPozycje(*pozycja);
 	poleWartosci->ustawPozycje(*pozycja);
 	ramka->ustawPozycje(*pozycja);
