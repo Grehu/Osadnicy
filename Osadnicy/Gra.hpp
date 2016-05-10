@@ -1,5 +1,7 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include "PlanszaBuilder.hpp"
+#include "Plansza.hpp"
 
 using namespace std;
 //using namespace sf;
@@ -11,5 +13,8 @@ struct Koordynaty {
 
 class Gra {
 private:
-	map::unordered_map<Koordynaty, PoleComposite> plansza;
+	Plansza * plansza;
+	
+public:
+	Plansza * stworzPlansze(PlanszaBuilder & budowniczy);
 };

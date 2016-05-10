@@ -61,6 +61,9 @@
     <Filter Include="Header Files\Mechanika\Połączenie">
       <UniqueIdentifier>{dba72e91-d3bf-45a5-8c0b-c8fb3004a2cd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Silnik\Generatory">
+      <UniqueIdentifier>{c092839f-b2f2-4592-9295-4ad13b434279}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -75,15 +78,6 @@
     <ClCompile Include="RysunekComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="PortLeaf.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="BudynekLeaf.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="DrogaLeaf.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="PoleLeaf.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -94,6 +88,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="RamkaLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BudynekLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrogaLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gracz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plansza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -111,9 +120,6 @@
       <Filter>Header Files\Grafika\Plansza</Filter>
     </ClInclude>
     <ClInclude Include="PoleLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="PortLeaf.hpp">
       <Filter>Header Files\Grafika\Plansza</Filter>
     </ClInclude>
     <ClInclude Include="Karta.hpp">
@@ -143,11 +149,20 @@
     <ClInclude Include="Zlodziej.hpp">
       <Filter>Header Files\Mechanika\Plansza</Filter>
     </ClInclude>
-    <ClInclude Include="BudynekLeaf.h">
+    <ClInclude Include="BudynekLeaf.hpp">
       <Filter>Header Files\Grafika\Plansza</Filter>
     </ClInclude>
     <ClInclude Include="DrogaLeaf.hpp">
       <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="PortLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Plansza.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
+    </ClInclude>
+    <ClInclude Include="PlanszaBuilder.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

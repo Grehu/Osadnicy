@@ -1,14 +1,14 @@
 #pragma once
-#include <SFML\Graphics.hpp>
 #include "RysunekComponent.hpp"
-#include "BudynekLeaf.h"
 
-class DrogaLeaf : public BudynekLeaf {
-private:
+using namespace sf;
+
+class DrogaLeaf : public RysunekComponent {
+protected:
+	Color kolorWlasciciela;
 	int orientacja;
-	
-	bool zbudowane = false;
 public:
+	void ustawKolor(Color kolor);
 	void ustawOrientacje(int orientacja);
 	void rysuj(RenderWindow & okno);
 };

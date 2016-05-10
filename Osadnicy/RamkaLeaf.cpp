@@ -1,9 +1,13 @@
 #include "RamkaLeaf.hpp"
-#include <iostream>
+
 
 void RamkaLeaf::rysuj(RenderWindow & okno)
 {
-	std::cout << "Uruchomiono rysowanie ramki." << std::endl;
-	sprite.setPosition(*pozycja);
-	okno.draw(sprite);
+	ksztalt->setPosition(*pozycja);
+	okno.draw(*ksztalt);
+}
+
+void RamkaLeaf::kolorujRamke(Color kolor)
+{
+	ksztalt->setFillColor(kolor);
 }

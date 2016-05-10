@@ -7,4 +7,5 @@ using namespace sf;
 class RamkaLeaf : public RysunekComponent {
 public: 
 	void rysuj(RenderWindow & okno);
+	void kolorujRamke(Color kolor);
 };

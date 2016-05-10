@@ -6,12 +6,12 @@
 using namespace sf;
 
 class PoleWartosciLeaf : public RysunekComponent {
-private: 
+protected:
 	bool zlodziej = false;
-	Sprite * zlodziejGrafika;
+	Shape  * zlodziejGrafika;
 	Text text;
 public:
-	void nadajZlodziejowiGrafike(Sprite & sprite);
+	void nadajZlodziejowiGrafike(Shape  & ksztalt);
 	void przypiszText(Text & text);
 	void ustawZlodzieja();
 	void zdejmijZlodzieja();

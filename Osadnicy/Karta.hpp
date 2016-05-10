@@ -5,12 +5,12 @@ using namespace sf;
 
 class Karta {
 private:
-	Sprite rewers;
-	Sprite awers;
-	Sprite podswietlone();
+	CircleShape  rewers;
+	CircleShape  awers;
+	CircleShape  podswietlone();
 public:
-	void ustawAwers(Sprite & sprite);
-	void ustawRewers(Sprite & sprite);
+	void ustawAwers(CircleShape  & ksztalt);
+	void ustawRewers(CircleShape  & ksztalt);
 	void rysujAwers(RenderWindow & okno);
 	void rysujRewers(RenderWindow & okno);
 };

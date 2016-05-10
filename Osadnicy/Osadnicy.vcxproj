@@ -119,8 +119,10 @@
     <ClCompile Include="BudynekLeaf.cpp" />
     <ClCompile Include="DrogaLeaf.cpp" />
     <ClCompile Include="Gra.cpp" />
+    <ClCompile Include="Gracz.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="Plansza.cpp" />
     <ClCompile Include="PoleLeaf.cpp" />
     <ClCompile Include="PoleWartosciLeaf.cpp" />
     <ClCompile Include="PortLeaf.cpp" />
@@ -129,12 +131,14 @@
     <ClCompile Include="RysunekComposite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BudynekLeaf.h" />
+    <ClInclude Include="BudynekLeaf.hpp" />
     <ClInclude Include="DrogaLeaf.hpp" />
     <ClInclude Include="Efekt.hpp" />
     <ClInclude Include="Gra.hpp" />
     <ClInclude Include="Gracz.hpp" />
     <ClInclude Include="Karta.hpp" />
+    <ClInclude Include="Plansza.hpp" />
+    <ClInclude Include="PlanszaBuilder.hpp" />
     <ClInclude Include="Pole.hpp" />
     <ClInclude Include="PoleLeaf.hpp" />
     <ClInclude Include="PoleWartosciLeaf.hpp" />

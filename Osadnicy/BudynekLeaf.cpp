@@ -1,23 +1,32 @@
-#include "BudynekLeaf.h"
-
-void BudynekLeaf::zbuduj()
-{
-	zbudowane = true;
-}
-
-void BudynekLeaf::ustawKolor(Color kolor)
-{
-	this->kolor = kolor;
-}
+#include "BudynekLeaf.hpp"
 
 void BudynekLeaf::rysuj(RenderWindow & okno)
 {
-	if (zbudowane) {
-		sprite.setColor(Color(255, 255, 255, 128));
+	if (sprawdzPunkt(okno)) {
+		ksztalt->setFillColor(Color(255, 255, 255, 255));
 	}
 	else {
-		sprite.setColor(Color(255, 255, 255, 255));
+		ksztalt->setFillColor(Color(128, 128, 128, 255));
 	}
-	sprite.setPosition(*pozycja);
-	okno.draw(sprite);
+	ksztalt->setOutlineColor(kolorWlasciciela);
+	ksztalt->setOutlineThickness(2.0f);
+	ksztalt->setPosition(*pozycja);
+	okno.draw(*ksztalt);
+}
+
+void BudynekLeaf::ustawKolorRamki(Color kolor)
+{
+	kolorWlasciciela = kolor;
+}
+
+bool BudynekLeaf::sprawdzPunkt(RenderWindow & okno)
+{
+	if (ksztalt->getGlobalBounds().contains(Vector2f(Mouse::getPosition(okno)))) {
+		podswietlone = true;
+		return true;
+	}
+	else {
+		podswietlone = false;
+		return false;
+	}
 }

@@ -2,9 +2,9 @@
 
 
 
-void PoleWartosciLeaf::nadajZlodziejowiGrafike(Sprite & sprite)
+void PoleWartosciLeaf::nadajZlodziejowiGrafike(Shape  & ksztalt)
 {
-	zlodziejGrafika = &sprite;
+	zlodziejGrafika = &ksztalt;
 }
 
 void PoleWartosciLeaf::przypiszText(Text & text)
@@ -25,9 +25,9 @@ void PoleWartosciLeaf::zdejmijZlodzieja()
 void PoleWartosciLeaf::rysuj(RenderWindow & okno)
 {
 
-	this->sprite.setPosition(*pozycja);
-	this->sprite.move(Vector2f(94.0f, 94.0f));
-	okno.draw(sprite);
+	this->ksztalt->setPosition(*pozycja);
+	this->ksztalt->move(Vector2f(94.0f, 94.0f));
+	okno.draw(*ksztalt);
 	
 	if (zlodziej) {
 		zlodziejGrafika->setPosition(*pozycja);

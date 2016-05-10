@@ -8,6 +8,8 @@
 #include "PoleLeaf.hpp"
 #include "PoleWartosciLeaf.hpp"
 #include "RysunekComposite.hpp"
+#include "BudynekLeaf.hpp"
+
 //#include <cstring>
 //#include <map>
 
@@ -15,15 +17,20 @@ using namespace sf;
 using namespace std;
 
 
-int width = 800;
-int height = 600;
+int szerokosc = 1200;
+int wysokosc = 600;
 int main() {
-	RenderWindow oknoAplikacji(VideoMode(width, height, 32), "Osadnicy z Catanu", Style::Close);
+	RenderWindow oknoAplikacji(VideoMode(szerokosc, wysokosc, 32), "Osadnicy z Catanu", Style::Close);
 
 	Texture teksturaLas;
 	Texture teksturaWartosc;
 	Texture teksturaRamka;
 	Texture teksturaZlodziej;
+
+	Texture teksturaDroga;
+
+	Texture teksturaMiasto;
+	Texture teksturaRamkaMiasta;
 
 	if (!teksturaLas.loadFromFile("lumber0.png")) { cout << "Blad ladowania tekstury lasu" << endl; }
 	else { cout << "Tekstura zaladowana!" << endl; }
@@ -34,20 +41,88 @@ int main() {
 	if (!teksturaZlodziej.loadFromFile("thief0.png")) { cout << "Blad ladowania tekstury zlodzieja" << endl; }
 	else { cout << "Tekstura zaladowana!" << endl; }
 
+	if (!teksturaDroga.loadFromFile("road.png")) { cout << "Blad ladowania tekstury drogi" << endl; }
+	else { cout << "Tekstura zaladowana!" << endl; }
+
+	if (!teksturaMiasto.loadFromFile("city3.png")) { cout << "Blad ladowania tekstury miasta" << endl; }
+	else { cout << "Tekstura zaladowana!" << endl; }
+	if (!teksturaRamkaMiasta.loadFromFile("board1.png")) { cout << "Blad ladowania tekstury ramki miasta" << endl; }
+	else { cout << "Tekstura zaladowana!" << endl; }
+
 	teksturaLas.setSmooth(true);
 	teksturaRamka.setSmooth(true);
 	teksturaWartosc.setSmooth(true);
 	teksturaZlodziej.setSmooth(true);
 
-	Sprite lasKsztalt(teksturaLas);
-	Sprite wartoscKsztalt(teksturaWartosc);
-	Sprite ramkaKsztalt(teksturaRamka);
-	Sprite zlodziejKsztalt(teksturaZlodziej);
+	teksturaDroga.setSmooth(true);
+	teksturaDroga.setRepeated(true);
+
+	teksturaMiasto.setSmooth(true);
+	teksturaRamkaMiasta.setSmooth(true);
+
+	CircleShape  lasKsztalt(128, 6);
+	CircleShape  wartoscKsztalt(32);
+	CircleShape  ramkaKsztalt(128, 6);
+	CircleShape  zlodziejKsztalt(32);
+	RectangleShape drogaKsztalt(Vector2f(128, 16));
+	CircleShape  miastoKsztalt(32);
+	CircleShape  ramkaMiastaKsztalt(34);
+
+	lasKsztalt.setPointCount(6);
+	ramkaKsztalt.setPointCount(6);
+
+
+	Texture * wskTeksturaLas = &teksturaLas;
+	Texture * wskTeksturaWartosc = &teksturaWartosc;
+	Texture * wskTeksturaRamka = &teksturaRamka;
+	Texture * wskTeksturaZlodziej = &teksturaZlodziej;
+
+	Texture * wskTeksturaDroga = &teksturaDroga;
+
+	Texture * wskTeksturaMiasto = &teksturaMiasto;
+	Texture * wskTeksturaRamkaMiasta = &teksturaRamkaMiasta;
+
+
+	lasKsztalt.setTexture(wskTeksturaLas);
+	wartoscKsztalt.setTexture(wskTeksturaWartosc);
+	ramkaKsztalt.setTexture(wskTeksturaRamka);
+	zlodziejKsztalt.setTexture(wskTeksturaZlodziej);
+
+	drogaKsztalt.setTexture(wskTeksturaDroga);
+	drogaKsztalt.setFillColor(Color(150, 0, 150, 100));
+	
+
+	miastoKsztalt.setTexture(wskTeksturaMiasto);
+	ramkaMiastaKsztalt.setTexture(wskTeksturaRamkaMiasta);
 
 	
 
 	Vector2f polozenieD(128.0f, 128.0f);
 	Vector2f polozenieM(256.0f, 256.0f);
+
+	float przesunieciePodstawowe_XR1 = 224.0f;
+	float przesunieciePodstawowe_YR1 = 0.0f;
+
+	float przesuniecieRzedowe_X = 112.0f;
+	float przesuniecieRzedowe_Y = 192.0f;
+
+	float drugiRzadX = 128.0f - 16.00f;
+	float przesuniecieY = 256.0f - 64.0f;
+	float przesuniecieX = 256.0f - 32.00f;
+
+	Vector2f pozycja1(0.0f, 0.0f);
+	Vector2f pozycja2(256.0f - 32.00f, 0.0f);
+	Vector2f pozycja3(128.0f - 16.00f, 256.0f - 64.0f);
+	Vector2f pozycja4(256.0f - 48.00f, 256.0f - 73.5f - 16.0f);
+
+	Vector2f pozycja5(przesuniecieX * 2, 0.0f);
+	Vector2f pozycja6(przesuniecieX * 2 + drugiRzadX, przesuniecieY);
+	Vector2f pozycja7(0.0f, przesuniecieY * 2);
+	Vector2f pozycja8(przesuniecieRzedowe_X, przesuniecieRzedowe_Y + przesuniecieY * 2);
+
+	//Vector2f pozycja5();
+
+	Vector2f polozenieB(0.0f, 0.0f);
 
 	lasKsztalt.setPosition(polozenieD);
 
@@ -65,22 +140,31 @@ int main() {
 	RamkaLeaf ramka;
 	PoleWartosciLeaf wartosc;
 	RysunekComposite kompozyt;
+	RysunekComponent droga;
+	BudynekLeaf budynek;
 
 	pole.ustawPozycje(polozenieD);
-	pole.ustawSprite(lasKsztalt);
+	pole.ustawKsztalt(lasKsztalt);
 
 	ramka.ustawPozycje(polozenieD);
-	ramka.ustawSprite(ramkaKsztalt);
+	ramka.ustawKsztalt(ramkaKsztalt);
 
 	wartosc.nadajZlodziejowiGrafike(zlodziejKsztalt);
 	wartosc.ustawPozycje(polozenieM);
-	wartosc.ustawSprite(wartoscKsztalt);
+	wartosc.ustawKsztalt(wartoscKsztalt);
 	wartosc.przypiszText(text);
 
 	kompozyt.ustawPole(pole);
 	kompozyt.ustawRamke(ramka);
 	kompozyt.ustawWartosc(wartosc);
 	kompozyt.ustawPozycje(polozenieD);
+
+	budynek.ustawKsztalt(miastoKsztalt);
+	budynek.ustawPozycje(polozenieB);
+	budynek.ustawKolorRamki(Color(200, 0, 200, 200));
+
+	droga.ustawKsztalt(drogaKsztalt);
+	droga.ustawPozycje(polozenieB);
 
 	wartosc.ustawZlodzieja();
 	
@@ -98,8 +182,24 @@ int main() {
 			}
 		}
 		//tu Twój kod
-		oknoAplikacji.clear(Color::White);
+		oknoAplikacji.clear(Color::Black);
+		kompozyt.ustawPozycje(pozycja1);
 		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja2);
+		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja3);
+		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja5);
+		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja6);
+		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja7);
+		kompozyt.rysuj(oknoAplikacji);
+		kompozyt.ustawPozycje(pozycja8);
+		kompozyt.rysuj(oknoAplikacji);
+		//droga.rysuj(oknoAplikacji);
+		budynek.ustawPozycje(pozycja4);
+		budynek.rysuj(oknoAplikacji);
 		oknoAplikacji.display();
 	}
 	//system("PAUSE");

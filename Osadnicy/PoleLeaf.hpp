@@ -5,7 +5,7 @@
 using namespace sf;
 
 class PoleLeaf : public RysunekComponent {
-private:
+protected:
 	bool podswietlone;
 public:
 	void rysuj(RenderWindow & okno);

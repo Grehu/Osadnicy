@@ -1,0 +1,168 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\Silnik">
+      <UniqueIdentifier>{01d24361-46ba-49bd-bd26-a0d2ffd44e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik\Okna">
+      <UniqueIdentifier>{2fea1481-d660-4e9d-af1f-6a53fc74fb54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik\Stany">
+      <UniqueIdentifier>{1bef3949-1440-4040-8c64-6237d2ec1e1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika">
+      <UniqueIdentifier>{46fcfee5-1f76-4d61-abdf-1e019f9bea49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik">
+      <UniqueIdentifier>{8502830e-a587-4832-8c15-b5704db30908}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika\Karty">
+      <UniqueIdentifier>{57f05bca-d4b8-4984-ad82-909825707890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Grafika\Plansza">
+      <UniqueIdentifier>{66b73ebd-5ab6-4e84-b0a7-77db551026a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik\Stany">
+      <UniqueIdentifier>{7399d62e-0882-4566-aa29-ebb20020ff07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Silnik\Okna">
+      <UniqueIdentifier>{4d18e599-654e-41f3-9cd9-6042736fe76f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grafika">
+      <UniqueIdentifier>{dc27c22f-7bc5-4fad-8083-e6a634bab2b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grafika\Karty">
+      <UniqueIdentifier>{ba71781d-5182-4cb9-8329-2cd685fed18a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Grafika\Plansza">
+      <UniqueIdentifier>{def0d0f9-243b-4e7f-94e3-30bc112ef2cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mechanika">
+      <UniqueIdentifier>{02af3e23-65ab-4560-a1a4-5415fbf839fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mechanika\Karty">
+      <UniqueIdentifier>{5143f495-1b35-4dca-9ff9-afe4c98188b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mechanika\Plansza">
+      <UniqueIdentifier>{2277c5e3-4f39-49c1-87f8-1b934e7ebcb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Mechanika\Połączenie">
+      <UniqueIdentifier>{dba72e91-d3bf-45a5-8c0b-c8fb3004a2cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Silnik\Generatory">
+      <UniqueIdentifier>{c092839f-b2f2-4592-9295-4ad13b434279}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gra.cpp">
+      <Filter>Source Files\Silnik\Stany</Filter>
+    </ClCompile>
+    <ClCompile Include="MainWindow.cpp">
+      <Filter>Source Files\Silnik\Okna</Filter>
+    </ClCompile>
+    <ClCompile Include="RysunekComponent.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PoleLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PoleWartosciLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RysunekComposite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RamkaLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BudynekLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DrogaLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Gracz.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PortLeaf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Plansza.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="RamkaLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComponent.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComposite.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleWartosciLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Karta.hpp">
+      <Filter>Header Files\Grafika\Karty</Filter>
+    </ClInclude>
+    <ClInclude Include="Gra.hpp">
+      <Filter>Header Files\Silnik</Filter>
+    </ClInclude>
+    <ClInclude Include="Sytuacja.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
+    </ClInclude>
+    <ClInclude Include="Gracz.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
+    </ClInclude>
+    <ClInclude Include="Surowiec.hpp">
+      <Filter>Header Files\Mechanika\Karty</Filter>
+    </ClInclude>
+    <ClInclude Include="Efekt.hpp">
+      <Filter>Header Files\Mechanika\Karty</Filter>
+    </ClInclude>
+    <ClInclude Include="Pole.hpp">
+      <Filter>Header Files\Mechanika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Port.hpp">
+      <Filter>Header Files\Mechanika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Zlodziej.hpp">
+      <Filter>Header Files\Mechanika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="BudynekLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="DrogaLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="PortLeaf.hpp">
+      <Filter>Header Files\Grafika\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Plansza.hpp">
+      <Filter>Header Files\Silnik\Stany</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+</Project>

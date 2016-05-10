@@ -5,10 +5,10 @@ using namespace sf;
 
 class RysunekComponent {
 protected: 
-	Sprite sprite;
+	Shape * ksztalt;
 	Vector2f * pozycja;
 public:
 	void ustawPozycje(Vector2f & pozycja);
-	void ustawSprite(Sprite & sprite);
+	void ustawKsztalt(Shape  & ksztalt);
 	virtual void rysuj(RenderWindow & okno);
 };

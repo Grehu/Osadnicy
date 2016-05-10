@@ -6,14 +6,14 @@ void RysunekComponent::ustawPozycje(Vector2f & pozycja)
 	this->pozycja = &pozycja;
 }
 
-void RysunekComponent::ustawSprite(Sprite & sprite)
+void RysunekComponent::ustawKsztalt(Shape  & ksztalt)
 {
-	this->sprite = sprite;
+	this->ksztalt = &ksztalt;
 }
 
 void RysunekComponent::rysuj(RenderWindow & okno)
 {
 
-	sprite.setPosition(*pozycja);
-	okno.draw(sprite);
+	ksztalt->setPosition(*pozycja);
+	okno.draw(*ksztalt);
 }

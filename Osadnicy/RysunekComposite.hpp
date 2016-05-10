@@ -7,7 +7,7 @@
 using namespace sf;
 
 class RysunekComposite : public RysunekComponent {
-private:
+protected:
 	RysunekComponent * pole;
 	RysunekComponent * poleWartosci;
 	RysunekComponent * ramka;

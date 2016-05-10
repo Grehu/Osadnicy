@@ -1,11 +1,13 @@
 #pragma once
-#include <SFML\Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include "RysunekComponent.hpp"
+#include "BudynekLeaf.hpp"
 
-using namespace sf;
-
-class PoleLeaf : public RysunekComponent {
-
+class PortLeaf : public BudynekLeaf {
+protected:
+	Shape * surowiec;
 public:
-	void ustawOrientacje(int orientacja);
+	void ustawSurowiec(Shape & surowiec);
+	void rysuj(RenderWindow & okno);
 };
+
