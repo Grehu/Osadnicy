@@ -19,3 +19,23 @@ Gracz::Gracz(string kolor)
 	kartyRozwoju["urodzaj"] = 0;
 	kartyRozwoju["zwyciestwo"] = 0;
 }
+
+void Gracz::zbierzSurowce(int wartosc)
+{
+	for (int i = 0; i < osady.size(); i++) {
+		Dostawa nowa = osady[i]->zbierzSurowce(wartosc);
+		for (int j = 0; j < 3; j++) {
+			surowce[nowa.nazwa[j]] += nowa.ilosc[j];
+		}
+	}
+}
+
+void Gracz::dodajOsade(Osada * osada)
+{
+	osady.push_back(osada);
+}
+
+void Gracz::dodajDroge(Droga * droga)
+{
+	drogi.push_back(droga);
+}

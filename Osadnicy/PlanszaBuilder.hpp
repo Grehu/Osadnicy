@@ -1,17 +1,25 @@
 #pragma once
-#include "RysunekComponent.hpp"
+
 #include "Plansza.hpp"
+#include "DystrybutorTekstur.hpp"
+#include <SFML\Graphics.hpp>
+
+
 
 class PlanszaBuilder {
-	Plansza * plansza;
-public:
-	virtual void budujPlansze() {};
-	virtual void budujLokacje() {};
-	virtual void budujPola() {};
-	virtual void budujPorty() {};
-	virtual Plansza * zwrocPlansze() { return 0; };
 protected:
-	PlanszaBuilder();
+	//PlanszaBuilder();
+	Plansza * plansza;
+	DystrybutorTekstur * tekstury;
+public:
+	void przypiszDystrybutora(DystrybutorTekstur & tekstury);
+	virtual void budujPlansze(int szerokosc, int wysokosc) {};
+	virtual void budujPole() {};
+	virtual void budujPort() {};
+	virtual void budujPole(string surowiec) {};
+	virtual void budujPort(string surowiec) {};
+	virtual Plansza * zwrocPlansze() { return 0; };
+
 
 
 };

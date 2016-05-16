@@ -1,5 +1,7 @@
 #pragma once
-/*class Efekt {
+#include "Gra.hpp"
+
+class Efekt {
 public:
-	void wywolajEfekt
-};*/
+	void wywolajEfekt(Gra & gra, Gracz & wywolujacy);
+};

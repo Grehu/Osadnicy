@@ -17,14 +17,14 @@ void RysunekComposite::ustawRamke(RamkaLeaf & ramka)
 }
 
 
-void RysunekComposite::rysuj(RenderWindow & okno)
+void RysunekComposite::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 {
-
+	/*
 	pole->ustawPozycje(*pozycja);
 	poleWartosci->ustawPozycje(*pozycja);
 	ramka->ustawPozycje(*pozycja);
-	
-	pole->rysuj(okno);
-	ramka->rysuj(okno);
-	poleWartosci->rysuj(okno);
+	*/
+	pole->rysuj(okno, przewijanie);
+	ramka->rysuj(okno, przewijanie);
+	poleWartosci->rysuj(okno, przewijanie);
 }

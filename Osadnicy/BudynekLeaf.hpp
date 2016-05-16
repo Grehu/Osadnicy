@@ -9,7 +9,7 @@ protected:
 	bool podswietlone;
 	Color kolorWlasciciela;
 public:
-	void rysuj(RenderWindow & okno);
+	void rysuj(RenderWindow & okno, Vector2f * przewijanie);
 	void ustawKolorRamki(Color kolor);
 	bool sprawdzPunkt(RenderWindow & okno);
 };

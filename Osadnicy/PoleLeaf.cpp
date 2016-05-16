@@ -1,7 +1,7 @@
 #include "PoleLeaf.hpp"
 
 
-void PoleLeaf::rysuj(RenderWindow & okno)
+void PoleLeaf::rysuj(RenderWindow & okno, Vector2f * lokalizacja)
 {
 
 	if (sprawdzPunkt(okno)) {
@@ -10,7 +10,7 @@ void PoleLeaf::rysuj(RenderWindow & okno)
 	else {
 		ksztalt->setFillColor(Color(128, 128, 128, 255));
 	}
-	RysunekComponent::rysuj(okno);
+	RysunekComponent::rysuj(okno, lokalizacja);
 }
 
 bool PoleLeaf::sprawdzPunkt(RenderWindow & okno)

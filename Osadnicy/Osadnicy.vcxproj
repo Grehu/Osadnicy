@@ -117,26 +117,44 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="BudynekLeaf.cpp" />
+    <ClCompile Include="Droga.cpp" />
     <ClCompile Include="DrogaLeaf.cpp" />
+    <ClCompile Include="DystrybutorTekstur.cpp" />
     <ClCompile Include="Gra.cpp" />
     <ClCompile Include="Gracz.cpp" />
+    <ClCompile Include="Kostka.cpp" />
+    <ClCompile Include="LosowaPlanszaBuilder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="Osada.cpp" />
     <ClCompile Include="Plansza.cpp" />
+    <ClCompile Include="PlanszaBuilder.cpp" />
+    <ClCompile Include="Pole.cpp" />
     <ClCompile Include="PoleLeaf.cpp" />
     <ClCompile Include="PoleWartosciLeaf.cpp" />
+    <ClCompile Include="Port.cpp" />
     <ClCompile Include="PortLeaf.cpp" />
     <ClCompile Include="RamkaLeaf.cpp" />
     <ClCompile Include="RysunekComponent.cpp" />
     <ClCompile Include="RysunekComposite.cpp" />
+    <ClCompile Include="Zlodziej.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BudynekLeaf.hpp" />
+    <ClInclude Include="Dostawa.hpp" />
+    <ClInclude Include="Droga.hpp" />
     <ClInclude Include="DrogaLeaf.hpp" />
+    <ClInclude Include="DystrybutorTekstur.hpp" />
     <ClInclude Include="Efekt.hpp" />
+    <ClInclude Include="EfektRycerza.hpp" />
     <ClInclude Include="Gra.hpp" />
     <ClInclude Include="Gracz.hpp" />
+    <ClInclude Include="Koordynaty.hpp" />
     <ClInclude Include="Karta.hpp" />
+    <ClInclude Include="Kostka.hpp" />
+    <ClInclude Include="LosowaPlanszaBuilder.hpp" />
+    <ClInclude Include="OcenPlanszaBuilder.hpp" />
+    <ClInclude Include="Osada.hpp" />
     <ClInclude Include="Plansza.hpp" />
     <ClInclude Include="PlanszaBuilder.hpp" />
     <ClInclude Include="Pole.hpp" />
@@ -147,12 +165,12 @@
     <ClInclude Include="RamkaLeaf.hpp" />
     <ClInclude Include="RysunekComponent.hpp" />
     <ClInclude Include="RysunekComposite.hpp" />
+    <ClInclude Include="Stale_i_Operatory.hpp" />
     <ClInclude Include="Surowiec.hpp" />
     <ClInclude Include="Sytuacja.hpp" />
+    <ClInclude Include="Towar.hpp" />
     <ClInclude Include="Zlodziej.hpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

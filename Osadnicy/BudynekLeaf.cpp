@@ -1,6 +1,6 @@
 #include "BudynekLeaf.hpp"
 
-void BudynekLeaf::rysuj(RenderWindow & okno)
+void BudynekLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 {
 	if (sprawdzPunkt(okno)) {
 		ksztalt->setFillColor(Color(255, 255, 255, 255));
@@ -10,7 +10,7 @@ void BudynekLeaf::rysuj(RenderWindow & okno)
 	}
 	ksztalt->setOutlineColor(kolorWlasciciela);
 	ksztalt->setOutlineThickness(2.0f);
-	ksztalt->setPosition(*pozycja);
+	ksztalt->setPosition(*pozycja + *przewijanie);
 	okno.draw(*ksztalt);
 }
 

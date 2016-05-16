@@ -1,9 +1,9 @@
 #include "RamkaLeaf.hpp"
 
 
-void RamkaLeaf::rysuj(RenderWindow & okno)
+void RamkaLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 {
-	ksztalt->setPosition(*pozycja);
+	ksztalt->setPosition(*pozycja + *przewijanie);
 	okno.draw(*ksztalt);
 }
 

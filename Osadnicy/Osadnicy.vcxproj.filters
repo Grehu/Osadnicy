@@ -13,15 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Silnik">
-      <UniqueIdentifier>{01d24361-46ba-49bd-bd26-a0d2ffd44e54}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Silnik\Okna">
-      <UniqueIdentifier>{2fea1481-d660-4e9d-af1f-6a53fc74fb54}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Silnik\Stany">
-      <UniqueIdentifier>{1bef3949-1440-4040-8c64-6237d2ec1e1a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Grafika">
       <UniqueIdentifier>{46fcfee5-1f76-4d61-abdf-1e019f9bea49}</UniqueIdentifier>
     </Filter>
@@ -40,29 +31,29 @@
     <Filter Include="Source Files\Silnik\Okna">
       <UniqueIdentifier>{4d18e599-654e-41f3-9cd9-6042736fe76f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Grafika">
+    <Filter Include="Header Files\View">
       <UniqueIdentifier>{dc27c22f-7bc5-4fad-8083-e6a634bab2b3}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Grafika\Karty">
-      <UniqueIdentifier>{ba71781d-5182-4cb9-8329-2cd685fed18a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Grafika\Plansza">
-      <UniqueIdentifier>{def0d0f9-243b-4e7f-94e3-30bc112ef2cc}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\Mechanika">
+    <Filter Include="Header Files\Controler">
       <UniqueIdentifier>{02af3e23-65ab-4560-a1a4-5415fbf839fa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Mechanika\Karty">
+    <Filter Include="Header Files\Model">
+      <UniqueIdentifier>{01d24361-46ba-49bd-bd26-a0d2ffd44e54}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model\Plansza">
+      <UniqueIdentifier>{1c6a5c13-246f-4b5f-b450-0ba8e4d726de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Model\Karty">
       <UniqueIdentifier>{5143f495-1b35-4dca-9ff9-afe4c98188b7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Mechanika\Plansza">
-      <UniqueIdentifier>{2277c5e3-4f39-49c1-87f8-1b934e7ebcb8}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\Statystyki">
+      <UniqueIdentifier>{1bef3949-1440-4040-8c64-6237d2ec1e1a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Mechanika\Połączenie">
-      <UniqueIdentifier>{dba72e91-d3bf-45a5-8c0b-c8fb3004a2cd}</UniqueIdentifier>
+    <Filter Include="Header Files\Controler\Budowniczy">
+      <UniqueIdentifier>{f3d41da5-34ad-48d2-a0b8-89c81b18f134}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\Silnik\Generatory">
-      <UniqueIdentifier>{c092839f-b2f2-4592-9295-4ad13b434279}</UniqueIdentifier>
+    <Filter Include="Header Files\Model\Struktury">
+      <UniqueIdentifier>{3b41cd4f-f927-4a77-a458-59a0d47be12e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -105,67 +96,127 @@
     <ClCompile Include="Plansza.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Pole.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Osada.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Droga.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Port.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Zlodziej.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DystrybutorTekstur.cpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClCompile>
+    <ClCompile Include="LosowaPlanszaBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PlanszaBuilder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Kostka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RamkaLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="RysunekComponent.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="RysunekComposite.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="PoleWartosciLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="PoleLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="Karta.hpp">
-      <Filter>Header Files\Grafika\Karty</Filter>
-    </ClInclude>
-    <ClInclude Include="Gra.hpp">
-      <Filter>Header Files\Silnik</Filter>
-    </ClInclude>
     <ClInclude Include="Sytuacja.hpp">
-      <Filter>Header Files\Silnik\Stany</Filter>
+      <Filter>Header Files\Model\Statystyki</Filter>
     </ClInclude>
     <ClInclude Include="Gracz.hpp">
-      <Filter>Header Files\Silnik\Stany</Filter>
+      <Filter>Header Files\Model\Statystyki</Filter>
     </ClInclude>
     <ClInclude Include="Surowiec.hpp">
-      <Filter>Header Files\Mechanika\Karty</Filter>
+      <Filter>Header Files\Model\Karty</Filter>
     </ClInclude>
     <ClInclude Include="Efekt.hpp">
-      <Filter>Header Files\Mechanika\Karty</Filter>
+      <Filter>Header Files\Model\Karty</Filter>
     </ClInclude>
-    <ClInclude Include="Pole.hpp">
-      <Filter>Header Files\Mechanika\Plansza</Filter>
+    <ClInclude Include="EfektRycerza.hpp">
+      <Filter>Header Files\Model\Karty</Filter>
     </ClInclude>
-    <ClInclude Include="Port.hpp">
-      <Filter>Header Files\Mechanika\Plansza</Filter>
-    </ClInclude>
-    <ClInclude Include="Zlodziej.hpp">
-      <Filter>Header Files\Mechanika\Plansza</Filter>
+    <ClInclude Include="Karta.hpp">
+      <Filter>Header Files\View</Filter>
     </ClInclude>
     <ClInclude Include="BudynekLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
+      <Filter>Header Files\View</Filter>
     </ClInclude>
     <ClInclude Include="DrogaLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleLeaf.hpp">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleWartosciLeaf.hpp">
+      <Filter>Header Files\View</Filter>
     </ClInclude>
     <ClInclude Include="PortLeaf.hpp">
-      <Filter>Header Files\Grafika\Plansza</Filter>
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="RamkaLeaf.hpp">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComponent.hpp">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComposite.hpp">
+      <Filter>Header Files\View</Filter>
     </ClInclude>
     <ClInclude Include="Plansza.hpp">
-      <Filter>Header Files\Silnik\Stany</Filter>
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Droga.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Pole.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Zlodziej.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Port.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
     </ClInclude>
     <ClInclude Include="PlanszaBuilder.hpp">
-      <Filter>Header Files\Silnik\Stany</Filter>
+      <Filter>Header Files\Controler\Budowniczy</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <ClInclude Include="Gra.hpp">
+      <Filter>Header Files\Controler</Filter>
+    </ClInclude>
+    <ClInclude Include="Koordynaty.hpp">
+      <Filter>Header Files\Model\Struktury</Filter>
+    </ClInclude>
+    <ClInclude Include="Dostawa.hpp">
+      <Filter>Header Files\Model\Struktury</Filter>
+    </ClInclude>
+    <ClInclude Include="Osada.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="Towar.hpp">
+      <Filter>Header Files\Model\Struktury</Filter>
+    </ClInclude>
+    <ClInclude Include="DystrybutorTekstur.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="LosowaPlanszaBuilder.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="OcenPlanszaBuilder.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="Stale_i_Operatory.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Kostka.hpp">
+      <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -15,5 +15,5 @@ public:
 	void ustawPole(PoleLeaf & pole);
 	void ustawWartosc(PoleWartosciLeaf & poleWartosci);
 	void ustawRamke(RamkaLeaf & ramka);
-	void rysuj(RenderWindow & okno);
+	void rysuj(RenderWindow & okno, Vector2f * przewijanie);
 };

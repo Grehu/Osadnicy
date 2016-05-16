@@ -8,6 +8,6 @@ protected:
 	Shape * surowiec;
 public:
 	void ustawSurowiec(Shape & surowiec);
-	void rysuj(RenderWindow & okno);
+	void rysuj(RenderWindow & okno, Vector2f * przewijanie);
 };
 

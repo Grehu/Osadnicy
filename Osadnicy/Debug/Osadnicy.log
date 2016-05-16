@@ -1,2 +1,12 @@
-﻿  Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.exe
+﻿  Gra.cpp
+  Generating Code...
+  Compiling...
+  PlanszaBuilder.cpp
+  Plansza.cpp
+  LosowaPlanszaBuilder.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Kostka.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\kostka.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Generating Code...
+  Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.exe
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.pdb (Partial PDB)

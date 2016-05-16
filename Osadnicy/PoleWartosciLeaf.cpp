@@ -22,21 +22,21 @@ void PoleWartosciLeaf::zdejmijZlodzieja()
 	zlodziej = false;
 }
 
-void PoleWartosciLeaf::rysuj(RenderWindow & okno)
+void PoleWartosciLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 {
 
-	this->ksztalt->setPosition(*pozycja);
-	this->ksztalt->move(Vector2f(94.0f, 94.0f));
+	this->ksztalt->setPosition(*pozycja + PRZESUNIECIE_POLE_WARTOSCI + *przewijanie);
+	//this->ksztalt->move(PRZESUNIECIE_POLE_WARTOSCI);
 	okno.draw(*ksztalt);
 	
 	if (zlodziej) {
-		zlodziejGrafika->setPosition(*pozycja);
-		zlodziejGrafika->move(Vector2f(94.0f, 94.0f));
+		zlodziejGrafika->setPosition(*pozycja + PRZESUNIECIE_POLE_WARTOSCI + *przewijanie);
+		//zlodziejGrafika->move(PRZESUNIECIE_POLE_WARTOSCI);
 		okno.draw(*zlodziejGrafika);
 	}
 	else {
-		text.setPosition(*pozycja);
-		text.move(Vector2f(105.0f, 90.0f));
+		text.setPosition(*pozycja + PRZESUNIECIE_TEKSTU_WARTOSCI);
+		//text.move(PRZESUNIECIE_TEKSTU_WARTOSCI);
 		okno.draw(text);
 	}
 	

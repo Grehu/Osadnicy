@@ -8,6 +8,6 @@ class PoleLeaf : public RysunekComponent {
 protected:
 	bool podswietlone;
 public:
-	void rysuj(RenderWindow & okno);
+	void rysuj(RenderWindow & okno, Vector2f * lokalizacja);
 	bool sprawdzPunkt(RenderWindow & okno);
 };
