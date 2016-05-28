@@ -1,19 +1,19 @@
 #pragma once
-#include <string>
+#include "Surowiec.hpp"
 using namespace std;
 class Pole {
 private:
 	int wartosc = 0;
-	string surowiec;
+	Surowiec surowiec;
 	bool zlodziej = false;
 public:
 	
-	void ustawSurowiec(string surowiec);
+	void ustawSurowiec(Surowiec surowiec);
 	void ustawWartosc(int wartosc);
 
 	void ustawZlodzieja();
 	void zdejmijZlodzieja();
 
-	string rodzajSurowca();
+	Surowiec rodzajSurowca();
 	int zbierzSurowce(int ilosc, int wartosc);
 };

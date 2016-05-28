@@ -119,7 +119,9 @@
     <ClCompile Include="BudynekLeaf.cpp" />
     <ClCompile Include="Droga.cpp" />
     <ClCompile Include="DrogaLeaf.cpp" />
+    <ClCompile Include="DystrybutorCzcionek.cpp" />
     <ClCompile Include="DystrybutorTekstur.cpp" />
+    <ClCompile Include="DystrybutorWartosci.cpp" />
     <ClCompile Include="Gra.cpp" />
     <ClCompile Include="Gracz.cpp" />
     <ClCompile Include="Kostka.cpp" />
@@ -127,6 +129,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="Osada.cpp" />
+    <ClCompile Include="Parowanie.cpp" />
     <ClCompile Include="Plansza.cpp" />
     <ClCompile Include="PlanszaBuilder.cpp" />
     <ClCompile Include="Pole.cpp" />
@@ -137,6 +140,7 @@
     <ClCompile Include="RamkaLeaf.cpp" />
     <ClCompile Include="RysunekComponent.cpp" />
     <ClCompile Include="RysunekComposite.cpp" />
+    <ClCompile Include="Testy.cpp" />
     <ClCompile Include="Zlodziej.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -144,17 +148,22 @@
     <ClInclude Include="Dostawa.hpp" />
     <ClInclude Include="Droga.hpp" />
     <ClInclude Include="DrogaLeaf.hpp" />
+    <ClInclude Include="DystrybutorCzcionek.hpp" />
     <ClInclude Include="DystrybutorTekstur.hpp" />
+    <ClInclude Include="DystrybutorWartosci.hpp" />
     <ClInclude Include="Efekt.hpp" />
     <ClInclude Include="EfektRycerza.hpp" />
+    <ClInclude Include="Etykieta.hpp" />
     <ClInclude Include="Gra.hpp" />
     <ClInclude Include="Gracz.hpp" />
     <ClInclude Include="Koordynaty.hpp" />
     <ClInclude Include="Karta.hpp" />
     <ClInclude Include="Kostka.hpp" />
     <ClInclude Include="LosowaPlanszaBuilder.hpp" />
+    <ClInclude Include="Obszar.hpp" />
     <ClInclude Include="OcenPlanszaBuilder.hpp" />
     <ClInclude Include="Osada.hpp" />
+    <ClInclude Include="Parowanie.hpp" />
     <ClInclude Include="Plansza.hpp" />
     <ClInclude Include="PlanszaBuilder.hpp" />
     <ClInclude Include="Pole.hpp" />
@@ -162,12 +171,15 @@
     <ClInclude Include="PoleWartosciLeaf.hpp" />
     <ClInclude Include="Port.hpp" />
     <ClInclude Include="PortLeaf.hpp" />
+    <ClInclude Include="PrzeznaczenieFontu.hpp" />
     <ClInclude Include="RamkaLeaf.hpp" />
+    <ClInclude Include="Rozwoj.hpp" />
     <ClInclude Include="RysunekComponent.hpp" />
     <ClInclude Include="RysunekComposite.hpp" />
-    <ClInclude Include="Stale_i_Operatory.hpp" />
+    <ClInclude Include="Stale.hpp" />
     <ClInclude Include="Surowiec.hpp" />
     <ClInclude Include="Sytuacja.hpp" />
+    <ClInclude Include="Testy.hpp" />
     <ClInclude Include="Towar.hpp" />
     <ClInclude Include="Zlodziej.hpp" />
     <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp" />

@@ -1,6 +1,6 @@
 #include "Pole.hpp"
 
-void Pole::ustawSurowiec(string surowiec)
+void Pole::ustawSurowiec(Surowiec surowiec)
 {
 	this->surowiec = surowiec;
 }
@@ -22,7 +22,7 @@ void Pole::zdejmijZlodzieja()
 	zlodziej = false;
 }
 
-string Pole::rodzajSurowca()
+Surowiec Pole::rodzajSurowca()
 {
 	return surowiec;
 }

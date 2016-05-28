@@ -9,7 +9,7 @@ void PoleWartosciLeaf::nadajZlodziejowiGrafike(Shape  & ksztalt)
 
 void PoleWartosciLeaf::przypiszText(Text & text)
 {
-	this->text = text;
+	this->text = &text;
 }
 
 void PoleWartosciLeaf::ustawZlodzieja()
@@ -35,9 +35,9 @@ void PoleWartosciLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 		okno.draw(*zlodziejGrafika);
 	}
 	else {
-		text.setPosition(*pozycja + PRZESUNIECIE_TEKSTU_WARTOSCI);
+		text->setPosition(*pozycja + PRZESUNIECIE_TEKSTU_WARTOSCI + *przewijanie);
 		//text.move(PRZESUNIECIE_TEKSTU_WARTOSCI);
-		okno.draw(text);
+		okno.draw(*text);
 	}
 	
 }

@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
-#include "Stale_i_Operatory.hpp"
+#include "Stale.hpp"
 
 using namespace sf;
 

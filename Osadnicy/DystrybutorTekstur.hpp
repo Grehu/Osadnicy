@@ -2,17 +2,18 @@
 #include <unordered_map>
 #include <vector>
 #include <SFML\Graphics.hpp>
-#include <cstdlib>
+#include <random>
 #include <ctime>
+#include "Etykieta.hpp"
 using namespace std;
 using namespace sf;
 
 class DystrybutorTekstur {
 protected:
-	unordered_map<string, vector<Texture*>> magazyn;
+	unordered_map<Etykieta, vector<Texture*>> magazyn;
 public:
 	DystrybutorTekstur();
-	Texture * pobierzLosowaTeksture(string etykieta);
-	Texture * pobierzKonkretnaTeksture(string etykieta, int numer);
-	void dodajTeksture(string nazwaPliku, string etykieta);
+	Texture * pobierzLosowaTeksture(Etykieta etykieta);
+	Texture * pobierzKonkretnaTeksture(Etykieta etykieta, int numer);
+	void dodajTeksture(string nazwaPliku, Etykieta etykieta);
 };

@@ -1,0 +1,7 @@
+n - x portu/drogi
+m - y portu/drogi
+K Osada : K Port/Droga
+x1: n%2 + n/2
+x2: n%2 + n/2 + !(n%2) 
+y1: (n%2)m+(!(n%2)*(m+(m-1))) = (n%2)?m:(2m-1)
+y2: (n%2)?(m+1):(2m-1)

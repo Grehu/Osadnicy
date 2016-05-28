@@ -1,6 +1,6 @@
 #pragma once
-#include <string>
+#include "Surowiec.hpp"
 struct Towar {
-	std::string surowiec;
+	Surowiec surowiec;
 	int ilosc;
 };

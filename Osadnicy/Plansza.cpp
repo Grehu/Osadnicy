@@ -1,73 +1,53 @@
 #include "Plansza.hpp"
 
-Plansza::Plansza(int szerokosc, int wysokosc)
+int Plansza::losuj()
 {
-	this->szerokosc = szerokosc;
-	this->wysokosc = wysokosc;
-
-	pozycjeHexow = new Vector2f * [szerokosc];
-	for (int i = 0; i < wysokosc; i++) { pozycjeHexow[i] = new Vector2f; }
-	grafikiHexow = new RysunekComponent * [szerokosc];
-	for (int i = 0; i < wysokosc; i++) { grafikiHexow[i] = new RysunekComponent; }
-	pola = new Pole *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { pola[i] = new Pole; }
-
-	pozycjeDrog = new Vector2f *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { pozycjeDrog[i] = new Vector2f; }
-	grafikiDrog = new RysunekComponent *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { grafikiDrog[i] = new RysunekComponent; }
-	//drogi = new Droga *[szerokosc];
-	//for (int i = 0; i < wysokosc; i++) { drogi[i] = new Droga; }
-
-	pozycjeBudynkow = new Vector2f *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { pozycjeBudynkow[i] = new Vector2f; }
-	grafikiBudynkow = new RysunekComponent *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { grafikiBudynkow[i] = new RysunekComponent; }
-	//osady = new Osada *[szerokosc];
-	//for (int i = 0; i < wysokosc; i++) { osady[i] = new Osada; }
-
-	pozycjePortow = new Vector2f *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { pozycjePortow[i] = new Vector2f; }
-	grafikiPortow = new RysunekComponent *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { grafikiPortow[i] = new RysunekComponent; }
-	porty = new Port *[szerokosc];
-	for (int i = 0; i < wysokosc; i++) { porty[i] = new Port; }
-
-
-}
-Vector2f * Plansza::pobierzPozycjePola(Koordynaty koordynaty)
-{
-	return &pozycjeHexow[koordynaty.x][koordynaty.y];
-}
-Vector2f * Plansza::pobierzPozycjeDrogi(Koordynaty koordynaty)
-{
-	return &pozycjeDrog[koordynaty.x][koordynaty.y];
-}
-Vector2f * Plansza::pobierzPozycjeBudynku(Koordynaty koordynaty)
-{
-	return &pozycjeBudynkow[koordynaty.x][koordynaty.y];
-}
-Vector2f * Plansza::pobierzPozycjePortu(Koordynaty koordynaty)
-{
-	return &pozycjePortow[koordynaty.x][koordynaty.y];
-}
-/*
-Osada * Plansza::pobierzOsada(int x, int y)
-{
-	return &osady[x][y];
+	int wynik = 0;
+	for (int i = 0; i < kostki.size(); i++) {
+		wynik += kostki[i]->losujLiczbe();
+	}
+	return wynik;
 }
 
-Droga * Plansza::pobierzDroge(int x, int y)
+int Plansza::ileKostek()
 {
-	return &drogi[x][y];
+	return kostki.size();
 }
 
-Port * Plansza::pobierzPort(int x, int y)
+Obszar<Pole> * Plansza::pobierzPole(const Koordynaty & koordynaty)
 {
-	return &porty[x][y];
+	if (pola.size() > koordynaty.x && pola[koordynaty.x].size() > koordynaty.y) {
+		return &pola[koordynaty.x][koordynaty.y];
+	}
+	else { return nullptr; }
 }
-*/
-/*Pole * Plansza::pobierzPole(int x, int y)
+
+Obszar<Droga>* Plansza::pobierzDroge(const Koordynaty & koordynaty)
 {
-	return &pola[x][y];
-}*/
+	if (drogi.size() > koordynaty.x && drogi[koordynaty.x].size() > koordynaty.y) {
+		return &drogi[koordynaty.x][koordynaty.y];
+	}
+	else { return nullptr; }
+}
+
+Obszar<Osada>* Plansza::pobierzOsade(const Koordynaty & koordynaty)
+{
+	if (osady.size() > koordynaty.x && osady[koordynaty.x].size() > koordynaty.y) {
+		return &osady[koordynaty.x][koordynaty.y];
+	}
+	else { return nullptr; }
+}
+
+Obszar<Port>* Plansza::pobierzPort(const Koordynaty & koordynaty)
+{
+	if (porty.size() > koordynaty.x && porty[koordynaty.x].size() > koordynaty.y) {
+		return &porty[koordynaty.x][koordynaty.y];
+	}
+	else { return nullptr; }
+}
+
+void Plansza::dodajKostke(int iloscScian)
+{
+	Kostka * kostka = new Kostka(iloscScian);
+	kostki.push_back(kostka);
+}

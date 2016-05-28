@@ -9,7 +9,16 @@
 #include "PoleWartosciLeaf.hpp"
 #include "RysunekComposite.hpp"
 #include "BudynekLeaf.hpp"
-#include "Stale_i_Operatory.hpp"
+#include "PortLeaf.hpp"
+#include "Stale.hpp"
+
+#include "DystrybutorWartosci.hpp"
+
+#include "Plansza.hpp"
+#include "PlanszaBuilder.hpp"
+#include "LosowaPlanszaBuilder.hpp"
+
+#include "Testy.hpp"
 
 //#include <cstring>
 //#include <map>
@@ -142,7 +151,7 @@ int main() {
 	PoleWartosciLeaf wartosc;
 	RysunekComposite kompozyt;
 	RysunekComponent droga;
-	BudynekLeaf budynek;
+	PortLeaf budynek;
 
 	pole.ustawPozycje(&polozenieD);
 	pole.ustawKsztalt(lasKsztalt);
@@ -161,17 +170,23 @@ int main() {
 	kompozyt.ustawPozycje(&polozenieD);
 
 	budynek.ustawKsztalt(miastoKsztalt);
+	budynek.ustawSurowiec(zlodziejKsztalt);
 	budynek.ustawPozycje(&polozenieB);
-	budynek.ustawKolorRamki(Color(200, 0, 200, 200));
+	budynek.ustawKolory(&Color(255, 0, 0, 0), &Color(255, 255, 255, 0));
+	//budynek.ustawKolorRamki(Color(200, 0, 200, 200));
 
 	droga.ustawKsztalt(drogaKsztalt);
 	droga.ustawPozycje(&polozenieB);
 
-	wartosc.ustawZlodzieja();
+	//wartosc.ustawZlodzieja();
 	
 	Vector2f przewijanie(0.0f, 0.0f);
 	Vector2f krok(0.1f, 0.1f);
 	bool wzrost = true;
+
+	Test test;
+	//test.testPrzyporzadkowaniaPortu();
+	test.testPrzyporzadkowaniaOsady();
 	while (oknoAplikacji.isOpen())
 	{
 
@@ -187,13 +202,13 @@ int main() {
 		}
 
 
-		if (przewijanie.x > 256.0f || przewijanie.y > 256.0f) { wzrost = false; }
+		/*if (przewijanie.x > 256.0f || przewijanie.y > 256.0f) { wzrost = false; }
 		if (przewijanie.x < 1.0f || przewijanie.y < 1.0f) { wzrost = true; }
 		if (wzrost) { przewijanie += krok; }
-		else { przewijanie -= krok; }
+		else { przewijanie -= krok; }*/
 		//tu Twój kod
 		oknoAplikacji.clear(Color::Black);
-		kompozyt.ustawPozycje(&pozycja1);
+		/*kompozyt.ustawPozycje(&pozycja1);
 		kompozyt.rysuj(oknoAplikacji, &przewijanie);
 		kompozyt.ustawPozycje(&pozycja2);
 		kompozyt.rysuj(oknoAplikacji, &przewijanie);
@@ -207,9 +222,10 @@ int main() {
 		kompozyt.rysuj(oknoAplikacji, &przewijanie);
 		kompozyt.ustawPozycje(&pozycja8);
 		kompozyt.rysuj(oknoAplikacji, &przewijanie);
+		*/
 		//droga.rysuj(oknoAplikacji);
-		budynek.ustawPozycje(&pozycja4);
-		budynek.rysuj(oknoAplikacji, &przewijanie);
+		//budynek.ustawPozycje(&pozycja4);
+		//budynek.rysuj(oknoAplikacji, &przewijanie);
 		oknoAplikacji.display();
 	}
 	//system("PAUSE");

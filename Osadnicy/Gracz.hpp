@@ -4,6 +4,7 @@
 #include "Osada.hpp"
 #include "Droga.hpp"
 #include "Port.hpp"
+#include "Rozwoj.hpp"
 
 using namespace std;
 
@@ -12,8 +13,8 @@ protected:
 	static int liczbaGraczy;
 	int ID;
 	string kolor;
-	unordered_map<string, int> surowce;
-	unordered_map<string, int> kartyRozwoju;
+	unordered_map<Surowiec, int> surowce;
+	unordered_map<Rozwoj, int> kartyRozwoju;
 	vector<Osada*> osady;
 	vector<Droga*> drogi;
 	/*vector<Port*> porty;*/

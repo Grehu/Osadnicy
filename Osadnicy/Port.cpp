@@ -6,14 +6,14 @@ void Port::dodajKlientow(Osada & klient1, Osada & klient2)
 	this->klient2 = &klient2;
 }
 
-void Port::ustawSurowiec(string surowiec)
+void Port::ustawSurowiec(Surowiec surowiec)
 {
 	this->surowiec = surowiec;
 }
 
-Towar Port::handel(Towar eksportowany, string zakup)
+Towar Port::handel(Towar eksportowany, Surowiec zakup)
 {
-	if (surowiec == "") {
+	if (this->surowiec == Surowiec::nic) {
 		Towar importowany;
 		importowany.ilosc = eksportowany.ilosc / 3;
 		importowany.surowiec = zakup;
@@ -27,7 +27,7 @@ Towar Port::handel(Towar eksportowany, string zakup)
 	}
 	else {
 		Towar blad;
-		blad.surowiec = "";
+		blad.surowiec = Surowiec::nic;
 		blad.ilosc = 0;
 		return blad;
 	}

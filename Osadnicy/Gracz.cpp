@@ -7,17 +7,17 @@ Gracz::Gracz(string kolor)
 	liczbaGraczy++;
 	ID = liczbaGraczy;
 	this->kolor = kolor;
-	surowce["drewno"] = 0;
-	surowce["glina"] = 0;
-	surowce["kamien"] = 0;
-	surowce["welna"] = 0;
-	surowce["zboze"] = 0;
+	surowce[Surowiec::drewno] = 0;
+	surowce[Surowiec::glina] = 0;
+	surowce[Surowiec::kamien] = 0;
+	surowce[Surowiec::welna] = 0;
+	surowce[Surowiec::zboze] = 0;
 
-	kartyRozwoju["rycerz"] = 0;
-	kartyRozwoju["monopol"] = 0;
-	kartyRozwoju["droga"] = 0;
-	kartyRozwoju["urodzaj"] = 0;
-	kartyRozwoju["zwyciestwo"] = 0;
+	kartyRozwoju[Rozwoj::rycerz] = 0;
+	kartyRozwoju[Rozwoj::monopol] = 0;
+	kartyRozwoju[Rozwoj::droga] = 0;
+	kartyRozwoju[Rozwoj::urodzaj] = 0;
+	kartyRozwoju[Rozwoj::zwyciestwo] = 0;
 }
 
 void Gracz::zbierzSurowce(int wartosc)

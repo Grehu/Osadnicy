@@ -111,9 +111,6 @@
     <ClCompile Include="Zlodziej.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DystrybutorTekstur.cpp">
-      <Filter>Header Files\Controler\Budowniczy</Filter>
-    </ClCompile>
     <ClCompile Include="LosowaPlanszaBuilder.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -121,6 +118,21 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Kostka.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DystrybutorWartosci.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DystrybutorTekstur.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DystrybutorCzcionek.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Parowanie.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Testy.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -212,11 +224,35 @@
     <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp">
       <Filter>Header Files\Controler\Budowniczy</Filter>
     </ClInclude>
-    <ClInclude Include="Stale_i_Operatory.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Kostka.hpp">
       <Filter>Header Files\Model\Plansza</Filter>
+    </ClInclude>
+    <ClInclude Include="DystrybutorCzcionek.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="Obszar.hpp">
+      <Filter>Header Files\Model\Struktury</Filter>
+    </ClInclude>
+    <ClInclude Include="Stale.hpp">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="DystrybutorWartosci.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="Rozwoj.hpp">
+      <Filter>Header Files\Model\Karty</Filter>
+    </ClInclude>
+    <ClInclude Include="Etykieta.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="PrzeznaczenieFontu.hpp">
+      <Filter>Header Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="Parowanie.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="Testy.hpp">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
