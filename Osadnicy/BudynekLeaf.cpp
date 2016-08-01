@@ -9,13 +9,13 @@ void BudynekLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 		if (rozjasnienie > 0) { rozjasnienie -= 0.2f; }
 	}
 	ksztalt->setFillColor(Color(128 + rozjasnienie, 128 + rozjasnienie, 128 + rozjasnienie, 255));
-	ksztalt->setOutlineColor(*kolorWlasciciela);
+	ksztalt->setOutlineColor(kolorWlasciciela);
 	ksztalt->setOutlineThickness(2.0f);
-	ksztalt->setPosition(*pozycja + *przewijanie);
+	ksztalt->setPosition(pozycja + *przewijanie);
 	okno.draw(*ksztalt);
 }
 
-void BudynekLeaf::ustawKolorRamki(Color * kolor)
+void BudynekLeaf::ustawKolorRamki(Color kolor)
 {
 	kolorWlasciciela = kolor;
 }

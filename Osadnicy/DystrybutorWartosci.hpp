@@ -15,7 +15,7 @@ private:
 	void generujOdwrotnie();
 	void tasuj(int ilosc);
 public:
-	DystrybutorWartosci(std::vector<Kostka*> kostki, int iloscPol);
+	void inicjalizacja(std::vector<Kostka*> kostki, int iloscPol);
 	void generujWartosci();
 	void generujOdwrotneWartosci();
 	int przydzielWartosc();

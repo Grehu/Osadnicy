@@ -10,6 +10,7 @@
 
 class PlanszaBuilder {
 protected:
+	friend class Testy;
 	Plansza * plansza;
 	DystrybutorTekstur * tekstury;
 	DystrybutorCzcionek * czcionki;
@@ -20,6 +21,7 @@ protected:
 	virtual Shape * tworzSzescian(Etykieta etykieta) = 0;
 	virtual Shape * tworzProstokat(Etykieta etykieta, int orientacja) = 0;
 	virtual Shape * tworzKolo(Etykieta etykieta) = 0;
+
 	//Tworzenie tekstow
 	virtual Text * tworzTekst(String tresc) = 0;
 	//Tworzenie modelow
@@ -52,7 +54,12 @@ public:
 
 	//Nawigacja
 	virtual void nastepnaKolumna() { wskaznik.x++; };
-	virtual void nastepnyWiersz() { wskaznik.x = 0; wskaznik.y++; };
+	virtual void nastepnyWiersz() { 
+		wskaznik.x = 0; 
+		wskaznik.y++; 
+		vector<Obszar<Pole>> nowyWektor;
+		plansza->pola.push_back(nowyWektor);
+	}
 	virtual void skoczDo(int x, int y) { wskaznik.x = x; wskaznik.y = y; };
 
 	virtual Plansza * zwrocPlansze() { return 0; };

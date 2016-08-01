@@ -166,3 +166,64 @@ void Test::testPrzyporzadkowaniaOsady()
 	porownaj(osada9, pole9_1, pole9_2, pole9_3);
 	std::cout << "osada 10:" << std::endl;
 	}
+
+void Test::przypiszOknoWyswietlania(RenderWindow * okno)
+{
+	this->okno = okno;
+}
+
+void Test::inicjujTesteraBudowniczych()
+{
+	czcionki = new DystrybutorCzcionek();
+	tekstury = new DystrybutorTekstur();
+	wartosci = new DystrybutorWartosci();
+	PlanszaBuilder * builder = new LosowaPlanszaBuilder();
+	builder->przypiszDystrybutory(tekstury, czcionki, wartosci);
+	this->builder = builder;
+}
+
+void Test::testBudowaniaPola()
+{
+	builder->budujPlansze();
+	builder->budujPole(Surowiec::drewno);
+	builder->nastepnaKolumna();
+	builder->budujPole(Surowiec::glina);
+	builder->nastepnaKolumna();
+	builder->budujPole(Surowiec::kamien);
+	builder->nastepnyWiersz();
+	builder->budujPole(Surowiec::welna);
+	builder->nastepnaKolumna();
+	builder->budujPole(Surowiec::zboze);
+	plansza = builder->zwrocPlansze();
+	cout << "Zakonczono tworzenie pola." << endl;
+}
+void Test::testBudowaniaMorza()
+{
+	builder->budujPlansze();
+	builder->budujMorze();
+	plansza = builder->zwrocPlansze();
+	cout << "Zakonczono tworzenie morza." << endl;
+}
+void Test::testBudowaniaPustyni()
+{
+	builder->budujPlansze();
+	builder->budujPustynie();
+	plansza = builder->zwrocPlansze();
+	cout << "Zakonczono tworzenie pustyni." << endl;
+}
+
+void Test::testWyswietlania()
+{
+	plansza->wyswietlPlansze(*okno, Vector2f(0, 0));
+}
+
+Text Test::testDystrybutoraCzcionek()
+{
+	Text tekst;
+	string tresc = "test";
+	tekst.setFont(*czcionki->pobierzLosowaCzcionke(menu));
+	tekst.setCharacterSize(56);
+	tekst.setColor(Color(0, 0, 0));
+	tekst.setString(tresc);
+	return tekst;
+}

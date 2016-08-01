@@ -7,9 +7,11 @@ using namespace sf;
 class RysunekComponent {
 protected: 
 	Shape * ksztalt;
-	Vector2f * pozycja;
+	Vector2f pozycja;
 public:
-	void ustawPozycje(Vector2f * pozycja);
-	void ustawKsztalt(Shape  & ksztalt);
+	void ustawPozycje(Vector2f pozycja);
+	void ustawKsztalt(Shape  * ksztalt);
 	virtual void rysuj(RenderWindow & okno, Vector2f * przewijanie);
+	void czyscWskazniki();
+	
 };

@@ -5,9 +5,9 @@ void DrogaLeaf::ustawKolor(Color kolor)
 	kolorWlasciciela = kolor;
 }
 
-void DrogaLeaf::rysuj(RenderWindow & okno)
+void DrogaLeaf::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 {
 	ksztalt->setFillColor(kolorWlasciciela);
-	ksztalt->setPosition(*pozycja);
+	ksztalt->setPosition(pozycja+*przewijanie);
 	okno.draw(*ksztalt);
 }

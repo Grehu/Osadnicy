@@ -2,9 +2,8 @@
 #include <unordered_map>
 #include <vector>
 #include <SFML\Graphics\Font.hpp>
-#include <random>
-#include <ctime>
 #include "PrzeznaczenieFontu.hpp"
+#include "MaszynaLosujaca.hpp"
 using namespace std;
 using namespace sf;
 
@@ -13,7 +12,7 @@ protected:
 	unordered_map<PrzeznaczenieFontu, vector<Font>> magazyn;
 public:
 	DystrybutorCzcionek();
-	Font pobierzLosowaCzcionke(PrzeznaczenieFontu etykieta);
-	Font pobierzKonkretnaCzcionke(PrzeznaczenieFontu etykieta, int numer);
+	Font * pobierzLosowaCzcionke(PrzeznaczenieFontu etykieta);
+	Font * pobierzKonkretnaCzcionke(PrzeznaczenieFontu etykieta, int numer);
 	void dodajCzcionke(string nazwaPliku, PrzeznaczenieFontu etykieta);
 };

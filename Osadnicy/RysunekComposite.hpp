@@ -12,8 +12,9 @@ protected:
 	RysunekComponent * poleWartosci;
 	RysunekComponent * ramka;
 public:
-	void ustawPole(PoleLeaf & pole);
-	void ustawWartosc(PoleWartosciLeaf & poleWartosci);
-	void ustawRamke(RamkaLeaf & ramka);
+	void ustawPole(PoleLeaf * pole);
+	void ustawWartosc(PoleWartosciLeaf * poleWartosci);
+	void ustawRamke(RamkaLeaf * ramka);
 	void rysuj(RenderWindow & okno, Vector2f * przewijanie);
+	~RysunekComposite();
 };

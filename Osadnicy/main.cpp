@@ -32,7 +32,7 @@ int wysokosc = 600;
 int main() {
 	RenderWindow oknoAplikacji(VideoMode(szerokosc, wysokosc, 32), "Osadnicy z Catanu", Style::Close);
 
-	Texture teksturaLas;
+	/*Texture teksturaLas;
 	Texture teksturaWartosc;
 	Texture teksturaRamka;
 	Texture teksturaZlodziej;
@@ -177,16 +177,64 @@ int main() {
 
 	droga.ustawKsztalt(drogaKsztalt);
 	droga.ustawPozycje(&polozenieB);
-
+	*/
 	//wartosc.ustawZlodzieja();
 	
-	Vector2f przewijanie(0.0f, 0.0f);
+	Vector2f przewijanie(300.0f, 300.0f);
 	Vector2f krok(0.1f, 0.1f);
 	bool wzrost = true;
 
-	Test test;
+	//Test test;
 	//test.testPrzyporzadkowaniaPortu();
-	test.testPrzyporzadkowaniaOsady();
+	//test.testPrzyporzadkowaniaOsady();
+	
+
+	/*DystrybutorCzcionek czcionki;
+	DystrybutorTekstur tekstury;
+	DystrybutorWartosci wartosci;
+	
+	LosowaPlanszaBuilder budowniczy;
+	budowniczy.przypiszDystrybutory(&tekstury, &czcionki, &wartosci);
+	budowniczy.budujPlansze();
+	budowniczy.budujMorze();
+	budowniczy.budujMorze();
+	budowniczy.budujMorze();
+	budowniczy.budujMorze();
+	budowniczy.budujMorze();
+	budowniczy.nastepnyWiersz();
+	budowniczy.budujMorze();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujMorze();
+	budowniczy.nastepnyWiersz();
+	budowniczy.budujMorze();
+	budowniczy.budujPole();
+	budowniczy.budujPustynie();
+	budowniczy.budujPole();
+	budowniczy.budujMorze();
+	budowniczy.nastepnyWiersz();
+	budowniczy.budujMorze();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujMorze();
+	budowniczy.nastepnyWiersz();
+	budowniczy.budujMorze();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujPole();
+	budowniczy.budujMorze();
+	Plansza * plansza = budowniczy.zwrocPlansze();
+	plansza->pobierzOpis();*/
+	Test test;
+	test.inicjujTesteraBudowniczych();
+	test.przypiszOknoWyswietlania(&oknoAplikacji);
+	test.testBudowaniaPola();
+
+
+
+
 	while (oknoAplikacji.isOpen())
 	{
 
@@ -226,6 +274,9 @@ int main() {
 		//droga.rysuj(oknoAplikacji);
 		//budynek.ustawPozycje(&pozycja4);
 		//budynek.rysuj(oknoAplikacji, &przewijanie);
+		//plansza->wyswietlPola(oknoAplikacji, przewijanie);
+		test.testWyswietlania();
+		oknoAplikacji.draw(test.testDystrybutoraCzcionek());
 		oknoAplikacji.display();
 	}
 	//system("PAUSE");

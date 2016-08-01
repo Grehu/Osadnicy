@@ -128,6 +128,7 @@
     <ClCompile Include="LosowaPlanszaBuilder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
+    <ClCompile Include="MaszynaLosujaca.cpp" />
     <ClCompile Include="Osada.cpp" />
     <ClCompile Include="Parowanie.cpp" />
     <ClCompile Include="Plansza.cpp" />
@@ -160,6 +161,7 @@
     <ClInclude Include="Karta.hpp" />
     <ClInclude Include="Kostka.hpp" />
     <ClInclude Include="LosowaPlanszaBuilder.hpp" />
+    <ClInclude Include="MaszynaLosujaca.hpp" />
     <ClInclude Include="Obszar.hpp" />
     <ClInclude Include="OcenPlanszaBuilder.hpp" />
     <ClInclude Include="Osada.hpp" />
@@ -183,6 +185,9 @@
     <ClInclude Include="Towar.hpp" />
     <ClInclude Include="Zlodziej.hpp" />
     <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

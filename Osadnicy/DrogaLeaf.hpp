@@ -8,5 +8,5 @@ protected:
 	Color kolorWlasciciela;
 public:
 	void ustawKolor(Color kolor);
-	void rysuj(RenderWindow & okno); //TO REBUILD
+	void rysuj(RenderWindow & okno, Vector2f * przewijanie); //TO REBUILD
 };

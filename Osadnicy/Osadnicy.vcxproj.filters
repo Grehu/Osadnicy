@@ -55,6 +55,9 @@
     <Filter Include="Header Files\Model\Struktury">
       <UniqueIdentifier>{3b41cd4f-f927-4a77-a458-59a0d47be12e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Model\Losowania">
+      <UniqueIdentifier>{899bef52-0d20-4335-9a4a-978293c7d8a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -133,6 +136,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Testy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MaszynaLosujaca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -254,5 +260,11 @@
     <ClInclude Include="Testy.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="MaszynaLosujaca.hpp">
+      <Filter>Header Files\Model\Losowania</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

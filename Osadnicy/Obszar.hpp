@@ -16,9 +16,8 @@ enum class Odmiana {
 };
 template <class typ>
 struct Obszar{
-	Vector2f pozycja = 0;
-	RysunekComponent grafika = 0;
+	RysunekComponent * grafika;
 	Odmiana odmiana = Odmiana::nieprawidlowa;
-	typ obiekt = 0;
+	typ obiekt;
 };
 

@@ -1,25 +1,5 @@
-﻿  Plansza.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(6): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(19): warning C4018: '>': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(27): warning C4018: '>': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(35): warning C4018: '>': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(43): warning C4018: '>': signed/unsigned mismatch
-  Parowanie.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-  LosowaPlanszaBuilder.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(5): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  Compiling...
-  main.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-  PlanszaBuilder.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-  Gra.cpp
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  Testy.cpp
+﻿  MaszynaLosujaca.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\maszynalosujaca.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\visualcppworkspace\osadnicy\osadnicy\maszynalosujaca.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.exe
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.pdb (Partial PDB)

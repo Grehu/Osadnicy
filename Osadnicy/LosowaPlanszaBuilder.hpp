@@ -21,9 +21,9 @@ protected:
 
 	//Ustalanie wektorow
 	virtual Vector2f ustawPozycjePola();
-	virtual Vector2f ustawPozycjeOsady();
-	virtual Vector2f ustawPozycjeDrogi();
-	virtual Vector2f ustawPozycjePortu();
+	virtual Vector2f ustawPozycjeOsady() { return Vector2f(); }; //TODO
+	virtual Vector2f ustawPozycjeDrogi() { return Vector2f(); };//TODO
+	virtual Vector2f ustawPozycjePortu() { return Vector2f(); };//TODO
 	//Losowanie surowcow
 	virtual Surowiec losujSurowiec();
 
@@ -32,10 +32,10 @@ public:
 	//Budowa komponentow planszy
 	virtual void budujMorze();
 	virtual void budujPustynie();
-	virtual void budujObszarMieszkalny();
+	virtual void budujObszarMieszkalny() {};//TODO
 	virtual void budujPole();
 	virtual void budujPole(Surowiec surowiec);
-	virtual void budujPortZwykly();
+	virtual void budujPortZwykly() {};//TODO
 	virtual void budujPortSpecjalistyczny();
 	virtual void budujPortSpecjalistyczny(Surowiec surowiec);
 

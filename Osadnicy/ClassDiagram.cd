@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access" MembersFormat="FullSignature">
+  <Class Name="Test">
+    <Position X="24.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAABAAAA=</HashCode>
+      <FileName>Testy.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BudynekLeaf">
+    <Position X="3.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAACAAAAAAABAAAAAAACAAAAEAg=</HashCode>
+      <FileName>BudynekLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrogaLeaf">
+    <Position X="7.75" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAACAA=</HashCode>
+      <FileName>DrogaLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Karta">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AJAAAAAAAAAAAAAAIACCgCAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Karta.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoleLeaf">
+    <Position X="11.5" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAACAAAAAAABAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>PoleLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PoleWartosciLeaf">
+    <Position X="13.25" Y="12.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAgKAAAAAAAAAAAAAAAAAAIAAAAEBAAIAA=</HashCode>
+      <FileName>PoleWartosciLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PortLeaf">
+    <Position X="3.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAABQAECAAAAAAAAAAAQQBAABAAgAAAAAAAAAA=</HashCode>
+      <FileName>PortLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RamkaLeaf">
+    <Position X="5.5" Y="12.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RamkaLeaf.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RysunekComponent">
+    <Position X="8.75" Y="9" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AEABAAAAAAAABAAEAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>RysunekComponent.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RysunekComposite">
+    <Position X="9.5" Y="12.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAiAAgAAAAAAACABAAAAAAAAIA=</HashCode>
+      <FileName>RysunekComposite.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gra">
+    <Position X="9.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Gra.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DystrybutorCzcionek">
+    <Position X="2.75" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAQAAAAEAAAAAAAAAAAIAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>DystrybutorCzcionek.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DystrybutorTekstur">
+    <Position X="2.75" Y="2.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAgAAAEAABAAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>DystrybutorTekstur.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DystrybutorWartosci">
+    <Position X="2.75" Y="5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAMAAAAAAQAAAAgAABAAAAAABIBAAEAAAAAABQAAA=</HashCode>
+      <FileName>DystrybutorWartosci.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LosowaPlanszaBuilder">
+    <Position X="7.25" Y="1" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAgQAEgBAEAICEAAAgAIAAAAYAAAAEQBgAAEAUAAAA=</HashCode>
+      <FileName>LosowaPlanszaBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Parowanie">
+    <Position X="4.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAEAAAAAAAAAAAAAAAAAAQAAACAIAAAAAA=</HashCode>
+      <FileName>Parowanie.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlanszaBuilder">
+    <Position X="5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiQBEgBAEAICEAAAgAIAgAA6ACQAEQBgAAAAUAAAA=</HashCode>
+      <FileName>PlanszaBuilder.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Droga">
+    <Position X="15.75" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAARAAAAAAAAAAAAAAAAAAAAKCAAAAAAAAAAAAA=</HashCode>
+      <FileName>Droga.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Kostka">
+    <Position X="7" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAABAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Kostka.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Osada">
+    <Position X="15.75" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAgAAAAAAAAEAAQAAAAAAAABAAAAQAAgAAACEAA=</HashCode>
+      <FileName>Osada.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plansza">
+    <Position X="9.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAEAAAAIgAACAABAAACRAQAAIhQAAiQAAEACAAAAA=</HashCode>
+      <FileName>Plansza.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pole">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABBAgCAAAAAQAAAAAAQAIAAAAAAAAAAAAIIA=</HashCode>
+      <FileName>Pole.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Port">
+    <Position X="15.75" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAABAAYAAAAAAAAAAAAAQAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Port.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Zlodziej">
+    <Position X="10.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Zlodziej.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Efekt">
+    <Position X="15.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Efekt.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EfektRycerza">
+    <Position X="18" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>EfektRycerza.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Gracz">
+    <Position X="11.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAGAAAAAAEgAAAAAQAAAAAIAgCAAACgAAAQAAAAAA=</HashCode>
+      <FileName>Gracz.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sytuacja">
+    <Position X="22.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Sytuacja.hpp</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Dostawa">
+    <Position X="18.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>Dostawa.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Koordynaty">
+    <Position X="25" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>Koordynaty.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Obszar&lt;typ&gt;">
+    <Position X="12.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgCAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Obszar.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="Towar">
+    <Position X="25" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAQAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Towar.hpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="PrzeznaczenieFontu">
+    <Position X="0.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAwAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PrzeznaczenieFontu.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Etykieta">
+    <Position X="0.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QCAQIAAACBAggAAAAAghIAAAAAAAAAgAEgAIAABIEYk=</HashCode>
+      <FileName>Etykieta.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Rozwoj">
+    <Position X="15.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAEQE=</HashCode>
+      <FileName>Rozwoj.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Surowiec">
+    <Position X="18.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAACACAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>Surowiec.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Odmiana">
+    <Position X="12.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACEAAAAAAABIAAQAAAAAAAAAAAAAAAAgAA=</HashCode>
+      <FileName>Obszar.hpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

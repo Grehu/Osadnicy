@@ -11,11 +11,12 @@ protected:
 	float drugiKolor = 1.0f;
 	bool przyrost = true;
 	bool przekolorowanie = true;
-	Color * kolor1;
-	Color * kolor2;
+	Color kolor1;
+	Color kolor2;
 public:
 	void ustawSurowiec(Shape & surowiec);
-	void ustawKolory(Color * kolor1, Color * kolor2);
+	void ustawKolory(Color kolor1, Color kolor2);
 	void rysuj(RenderWindow & okno, Vector2f * przewijanie);
+	~PortLeaf();
 };
 

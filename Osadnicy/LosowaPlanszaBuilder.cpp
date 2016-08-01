@@ -17,6 +17,66 @@ void LosowaPlanszaBuilder::budujPlansze()
 	plansza = new Plansza();
 }
 
+void LosowaPlanszaBuilder::budujMorze()
+{
+	Obszar<Pole> nowe;
+	Vector2f pozycja(ustawPozycjePola());
+	
+	RamkaLeaf * ramka = new RamkaLeaf();
+	PoleLeaf * pole = new PoleLeaf();
+
+	pole->ustawKsztalt(tworzSzescian(Etykieta::morze));
+	pole->ustawPozycje(pozycja);
+	ramka->ustawKsztalt(tworzSzescian(Etykieta::ramka));
+	ramka->ustawPozycje(pozycja);
+
+	RysunekComposite * kompozyt = new RysunekComposite();
+
+	kompozyt->ustawPole(pole);
+	kompozyt->ustawPozycje(pozycja);
+	kompozyt->ustawRamke(ramka);
+	kompozyt->ustawKsztalt(tworzSzescian(Etykieta::morze));
+	kompozyt->ustawWartosc(nullptr);
+
+
+	nowe.grafika = kompozyt;
+	nowe.odmiana = Odmiana::morze;
+
+	plansza->wstawPole(nowe);
+}
+
+void LosowaPlanszaBuilder::budujPustynie()
+{
+	Obszar<Pole> nowe;
+	Vector2f pozycja(ustawPozycjePola());
+	
+	PoleWartosciLeaf * wartosc = new PoleWartosciLeaf();
+	RamkaLeaf * ramka = new RamkaLeaf();
+	PoleLeaf * pole = new PoleLeaf();
+
+	pole->ustawKsztalt(tworzSzescian(Etykieta::pustynia));
+	pole->ustawPozycje(pozycja);
+	ramka->ustawKsztalt(tworzSzescian(Etykieta::ramka));
+	ramka->ustawPozycje(pozycja);
+	wartosc->ustawKsztalt(tworzKolo(Etykieta::wartosc));
+	wartosc->ustawPozycje(pozycja);
+	wartosc->przypiszText(*czcionki->pobierzLosowaCzcionke(PrzeznaczenieFontu::wartosc), "0");
+
+	RysunekComposite * kompozyt = new RysunekComposite();
+
+	kompozyt->ustawPole(pole);
+	kompozyt->ustawPozycje(pozycja);
+	kompozyt->ustawRamke(ramka);
+	kompozyt->ustawWartosc(wartosc);
+	kompozyt->ustawKsztalt(tworzSzescian(Etykieta::pustynia));
+
+
+	nowe.grafika = kompozyt;
+	nowe.odmiana = Odmiana::pustynia;
+
+	plansza->wstawPole(nowe);
+}
+
 void LosowaPlanszaBuilder::budujPole()
 {
 	budujPole(losujSurowiec());
@@ -29,6 +89,42 @@ void LosowaPlanszaBuilder::budujPortSpecjalistyczny()
 
 void LosowaPlanszaBuilder::budujPole(Surowiec surowiec)
 {
+	Obszar<Pole> nowe;
+	Vector2f pozycja(ustawPozycjePola());
+	Etykieta etykieta;
+	switch (surowiec) {
+	case Surowiec::drewno: etykieta = Etykieta::drewno; break;
+	case Surowiec::glina: etykieta = Etykieta::glina; break;
+	case Surowiec::welna: etykieta = Etykieta::welna; break;
+	case Surowiec::zboze: etykieta = Etykieta::zboze; break;
+	case Surowiec::kamien: etykieta = Etykieta::kamien; break;
+	}
+
+	PoleWartosciLeaf * wartosc = new PoleWartosciLeaf();
+	RamkaLeaf * ramka = new RamkaLeaf();
+	PoleLeaf * pole = new PoleLeaf();
+
+	pole->ustawKsztalt(tworzSzescian(etykieta));
+	pole->ustawPozycje(pozycja);
+	ramka->ustawKsztalt(tworzSzescian(Etykieta::ramka));
+	ramka->ustawPozycje(pozycja);
+	wartosc->ustawKsztalt(tworzKolo(Etykieta::wartosc));
+	wartosc->ustawPozycje(pozycja);
+	wartosc->przypiszText(*czcionki->pobierzLosowaCzcionke(PrzeznaczenieFontu::wartosc), "0");
+
+	RysunekComposite * kompozyt = new RysunekComposite();
+
+	kompozyt->ustawPole(pole);
+	kompozyt->ustawPozycje(pozycja);
+	kompozyt->ustawRamke(ramka);
+	kompozyt->ustawWartosc(wartosc);
+	kompozyt->ustawKsztalt(tworzSzescian(etykieta));
+
+
+	nowe.grafika = kompozyt;
+	nowe.odmiana = Odmiana::poleSurowcow;
+
+	plansza->wstawPole(nowe);
 	/*Text * text = new Text;
 	text->setFont(*czcionki->pobierzKonkretnaCzcionke("wartosc", 0));
 	text->setCharacterSize(56);
@@ -108,7 +204,7 @@ Shape * LosowaPlanszaBuilder::tworzKolo(Etykieta etykieta)
 Text * LosowaPlanszaBuilder::tworzTekst(String tresc)
 {
 	Text * tekst = new Text;
-	tekst->setFont(czcionki->pobierzLosowaCzcionke(wartosc));
+	tekst->setFont(*czcionki->pobierzLosowaCzcionke(wartosc));
 	tekst->setCharacterSize(56);
 	tekst->setColor(Color(0, 0, 0));
 	tekst->setString(tresc);
@@ -154,5 +250,5 @@ Osada LosowaPlanszaBuilder::tworzObiektOsady()
 
 Vector2f LosowaPlanszaBuilder::ustawPozycjePola()
 {
-	return Vector2f(wskaznik.x*PRZESUNIECIE_X + ((wskaznik.x % 2) ? MODYFIKATOR_RZEDU_NIEPARZYSTEGO : 0.0f), wskaznik.y*PRZESUNIECIE_Y);
+	return Vector2f(wskaznik.x*PRZESUNIECIE_X + ((wskaznik.y % 2) ? MODYFIKATOR_RZEDU_NIEPARZYSTEGO : 0.0f), wskaznik.y*PRZESUNIECIE_Y);
 }

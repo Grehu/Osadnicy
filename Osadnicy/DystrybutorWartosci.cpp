@@ -64,7 +64,7 @@ void DystrybutorWartosci::tasuj(int ilosc)
 	}
 }
 
-DystrybutorWartosci::DystrybutorWartosci(std::vector<Kostka*> kostki, int iloscPol)
+void DystrybutorWartosci::inicjalizacja(std::vector<Kostka*> kostki, int iloscPol)
 {
 	this->min = kostki.size();
 	for (int i = 0; i < kostki.size(); i++) {

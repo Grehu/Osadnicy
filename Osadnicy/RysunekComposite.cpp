@@ -1,19 +1,19 @@
 #include "RysunekComposite.hpp"
 
 
-void RysunekComposite::ustawPole(PoleLeaf & pole)
+void RysunekComposite::ustawPole(PoleLeaf * pole)
 {
-	this->pole = &pole;
+	this->pole = pole;
 }
 
-void RysunekComposite::ustawWartosc(PoleWartosciLeaf & poleWartosci)
+void RysunekComposite::ustawWartosc(PoleWartosciLeaf * poleWartosci)
 {
-	this->poleWartosci = &poleWartosci;
+	this->poleWartosci = poleWartosci;
 }
 
-void RysunekComposite::ustawRamke(RamkaLeaf & ramka)
+void RysunekComposite::ustawRamke(RamkaLeaf * ramka)
 {
-	this->ramka = &ramka;
+	this->ramka = ramka;
 }
 
 
@@ -26,5 +26,14 @@ void RysunekComposite::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 	*/
 	pole->rysuj(okno, przewijanie);
 	ramka->rysuj(okno, przewijanie);
-	poleWartosci->rysuj(okno, przewijanie);
+	//if (poleWartosci!=nullptr) { poleWartosci->rysuj(okno, przewijanie); }
+}
+
+RysunekComposite::~RysunekComposite()
+{
+	pole->czyscWskazniki();
+	pole->~RysunekComponent();
+	if (poleWartosci != nullptr) { poleWartosci->czyscWskazniki(); poleWartosci->~RysunekComponent(); }
+	ramka->czyscWskazniki();
+	ramka->~RysunekComponent();
 }
