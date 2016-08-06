@@ -1,8 +1,7 @@
 #pragma once
-#include <random>
-#include <ctime>
 #include <vector>
 #include "Kostka.hpp"
+#include "MaszynaLosujaca.hpp"
 
 
 class DystrybutorWartosci {

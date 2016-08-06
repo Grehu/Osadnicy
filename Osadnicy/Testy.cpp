@@ -204,6 +204,17 @@ void Test::testBudowaniaMorza()
 	plansza = builder->zwrocPlansze();
 	cout << "Zakonczono tworzenie morza." << endl;
 }
+void Test::inicjalizacjaInterfejsu()
+{
+	hud = new HUD();
+}
+void Test::testOdtwarzaniaSchematu()
+{
+	Konwerter konwerter;
+	konwerter.przypiszBudowniczego(builder);
+	konwerter.przetworzSchemat();
+	plansza = konwerter.zwrocPlansze();
+}
 void Test::testBudowaniaPustyni()
 {
 	builder->budujPlansze();
@@ -214,7 +225,8 @@ void Test::testBudowaniaPustyni()
 
 void Test::testWyswietlania()
 {
-	plansza->wyswietlPlansze(*okno, Vector2f(0, 0));
+	plansza->wyswietlPlansze(*okno, Ustawienia::przewijanie);
+	hud->wyswietlPanele(*okno);
 }
 
 Text Test::testDystrybutoraCzcionek()

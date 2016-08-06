@@ -18,6 +18,7 @@
 #include "PlanszaBuilder.hpp"
 #include "LosowaPlanszaBuilder.hpp"
 
+#include "Ustawienia.hpp"
 #include "Testy.hpp"
 
 //#include <cstring>
@@ -27,10 +28,10 @@ using namespace sf;
 using namespace std;
 
 
-int szerokosc = 1200;
-int wysokosc = 600;
+//int szerokosc = 1200;
+//int wysokosc = 600;
 int main() {
-	RenderWindow oknoAplikacji(VideoMode(szerokosc, wysokosc, 32), "Osadnicy z Catanu", Style::Close);
+	RenderWindow oknoAplikacji(VideoMode(Ustawienia::szerokosc, Ustawienia::wysokosc, 32), "Osadnicy z Catanu", Style::Close);
 
 	/*Texture teksturaLas;
 	Texture teksturaWartosc;
@@ -180,9 +181,9 @@ int main() {
 	*/
 	//wartosc.ustawZlodzieja();
 	
-	Vector2f przewijanie(300.0f, 300.0f);
+	/*Vector2f przewijanie(300.0f, 300.0f);
 	Vector2f krok(0.1f, 0.1f);
-	bool wzrost = true;
+	bool wzrost = true;*/
 
 	//Test test;
 	//test.testPrzyporzadkowaniaPortu();
@@ -230,7 +231,10 @@ int main() {
 	Test test;
 	test.inicjujTesteraBudowniczych();
 	test.przypiszOknoWyswietlania(&oknoAplikacji);
-	test.testBudowaniaPola();
+	test.testOdtwarzaniaSchematu();
+	test.inicjalizacjaInterfejsu();
+	//test.testBudowaniaPola();
+	//test.testBudowaniaMorza();
 
 
 
@@ -278,6 +282,7 @@ int main() {
 		test.testWyswietlania();
 		oknoAplikacji.draw(test.testDystrybutoraCzcionek());
 		oknoAplikacji.display();
+
 	}
 	//system("PAUSE");
 	return 0;

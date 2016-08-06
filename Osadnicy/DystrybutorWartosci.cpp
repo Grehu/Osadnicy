@@ -51,12 +51,11 @@ void DystrybutorWartosci::generujOdwrotnie()
 
 void DystrybutorWartosci::tasuj(int ilosc)
 {//Fisher–Yates shuffle
-	srand(time(NULL));
 	int j = 0;
 	int tmp = 0;
 	for (ilosc; ilosc > 0; ilosc--) {
 		for (int i = magazyn.size() - 1; i > 0; i--) {
-			j = rand() % (i + 1);
+			j = MaszynaLosujaca::pobierzCalkowita() % (i + 1);
 			tmp = magazyn[j];
 			magazyn[j] = magazyn[i];
 			magazyn[i] = tmp;

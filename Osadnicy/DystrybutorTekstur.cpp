@@ -49,9 +49,9 @@ DystrybutorTekstur::DystrybutorTekstur()
 
 Texture * DystrybutorTekstur::pobierzLosowaTeksture(Etykieta etykieta)
 {
-	srand(time(NULL));
+	//srand(time(NULL));
 	int numer = 0;
-	if (magazyn[etykieta].size()>0) {numer = rand() % magazyn[etykieta].size(); }
+	if (magazyn[etykieta].size()>0) {numer = MaszynaLosujaca::pobierzCalkowita() % magazyn[etykieta].size(); }
 	return pobierzKonkretnaTeksture(etykieta, numer);
 }
 

@@ -5,10 +5,10 @@ void PoleLeaf::rysuj(RenderWindow & okno, Vector2f * lokalizacja)
 {
 
 	if (sprawdzPunkt(okno)) {
-		if (rozjasnienie < 127) { rozjasnienie += 0.1f; }
+		if (rozjasnienie < 127) { rozjasnienie += 0.2f; }
 	}
 	else {
-		if (rozjasnienie > 0) { rozjasnienie -= 0.1f; }
+		if (rozjasnienie > 0) { rozjasnienie -= 0.2f; }
 	}
 	ksztalt->setFillColor(Color(128 + rozjasnienie, 128 + rozjasnienie, 128 + rozjasnienie, 255));
 	RysunekComponent::rysuj(okno, lokalizacja);

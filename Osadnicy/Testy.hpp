@@ -4,6 +4,10 @@
 #include "PlanszaBuilder.hpp"
 #include "LosowaPlanszaBuilder.hpp"
 #include <iostream>
+#include "Konwerter.hpp"
+#include "Ustawienia.hpp"
+#include "PanelPrzewijania.hpp"
+#include "HUD.hpp"
 
 class Test {
 private:
@@ -15,6 +19,7 @@ private:
 	DystrybutorTekstur * tekstury;
 	DystrybutorWartosci * wartosci;
 	Plansza * plansza;
+	HUD * hud;
 public:
 	void testPrzyporzadkowaniaPortu();
 	void testPrzyporzadkowaniaOsady();
@@ -22,6 +27,8 @@ public:
 	void inicjujTesteraBudowniczych();
 	void testBudowaniaPola();
 	void testBudowaniaMorza();
+	void inicjalizacjaInterfejsu();
+	void testOdtwarzaniaSchematu();
 	void testBudowaniaPustyni();
 	void testWyswietlania();
 	Text testDystrybutoraCzcionek();

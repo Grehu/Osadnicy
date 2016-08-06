@@ -2,9 +2,8 @@
 #include <unordered_map>
 #include <vector>
 #include <SFML\Graphics.hpp>
-#include <random>
-#include <ctime>
 #include "Etykieta.hpp"
+#include "MaszynaLosujaca.hpp"
 using namespace std;
 using namespace sf;
 

@@ -10,7 +10,6 @@ void MaszynaLosujaca::inicjuj()
 int MaszynaLosujaca::pobierzCalkowita()
 {
 	if (calkowite.size() < 10) {
-		srand(time(NULL));
 		for (int i = 0; i < 50; i++) {
 			calkowite.push(rand());
 		}

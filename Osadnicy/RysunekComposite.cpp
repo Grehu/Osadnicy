@@ -26,7 +26,7 @@ void RysunekComposite::rysuj(RenderWindow & okno, Vector2f * przewijanie)
 	*/
 	pole->rysuj(okno, przewijanie);
 	ramka->rysuj(okno, przewijanie);
-	//if (poleWartosci!=nullptr) { poleWartosci->rysuj(okno, przewijanie); }
+	if (poleWartosci!=nullptr) { poleWartosci->rysuj(okno, przewijanie); }
 }
 
 RysunekComposite::~RysunekComposite()

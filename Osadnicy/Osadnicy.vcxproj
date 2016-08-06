@@ -124,12 +124,15 @@
     <ClCompile Include="DystrybutorWartosci.cpp" />
     <ClCompile Include="Gra.cpp" />
     <ClCompile Include="Gracz.cpp" />
+    <ClCompile Include="HUD.cpp" />
+    <ClCompile Include="Konwerter.cpp" />
     <ClCompile Include="Kostka.cpp" />
     <ClCompile Include="LosowaPlanszaBuilder.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MaszynaLosujaca.cpp" />
     <ClCompile Include="Osada.cpp" />
+    <ClCompile Include="PanelPrzewijania.cpp" />
     <ClCompile Include="Parowanie.cpp" />
     <ClCompile Include="Plansza.cpp" />
     <ClCompile Include="PlanszaBuilder.cpp" />
@@ -142,6 +145,7 @@
     <ClCompile Include="RysunekComponent.cpp" />
     <ClCompile Include="RysunekComposite.cpp" />
     <ClCompile Include="Testy.cpp" />
+    <ClCompile Include="Ustawienia.cpp" />
     <ClCompile Include="Zlodziej.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +161,9 @@
     <ClInclude Include="Etykieta.hpp" />
     <ClInclude Include="Gra.hpp" />
     <ClInclude Include="Gracz.hpp" />
+    <ClInclude Include="HUD.hpp" />
+    <ClInclude Include="Kierunek.hpp" />
+    <ClInclude Include="Konwerter.hpp" />
     <ClInclude Include="Koordynaty.hpp" />
     <ClInclude Include="Karta.hpp" />
     <ClInclude Include="Kostka.hpp" />
@@ -165,6 +172,7 @@
     <ClInclude Include="Obszar.hpp" />
     <ClInclude Include="OcenPlanszaBuilder.hpp" />
     <ClInclude Include="Osada.hpp" />
+    <ClInclude Include="PanelPrzewijania.hpp" />
     <ClInclude Include="Parowanie.hpp" />
     <ClInclude Include="Plansza.hpp" />
     <ClInclude Include="PlanszaBuilder.hpp" />
@@ -183,6 +191,7 @@
     <ClInclude Include="Sytuacja.hpp" />
     <ClInclude Include="Testy.hpp" />
     <ClInclude Include="Towar.hpp" />
+    <ClInclude Include="Ustawienia.hpp" />
     <ClInclude Include="Zlodziej.hpp" />
     <ClInclude Include="ZrownowazonaPlanszaBuilder.hpp" />
   </ItemGroup>

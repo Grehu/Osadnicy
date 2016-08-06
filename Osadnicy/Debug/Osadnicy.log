@@ -1,5 +1,65 @@
-﻿  MaszynaLosujaca.cpp
+﻿  Zlodziej.cpp
+  Ustawienia.cpp
+  Testy.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  RysunekComposite.cpp
+  RysunekComponent.cpp
+  RamkaLeaf.cpp
+  PortLeaf.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\portleaf.cpp(24): warning C4244: 'argument': conversion from 'float' to 'sf::Uint8', possible loss of data
+  Port.cpp
+  PoleWartosciLeaf.cpp
+  PoleLeaf.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\poleleaf.cpp(13): warning C4244: 'argument': conversion from 'double' to 'sf::Uint8', possible loss of data
+  Pole.cpp
+  PlanszaBuilder.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  Plansza.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(7): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(20): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(28): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(36): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(44): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(53): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(55): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(62): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(63): warning C4018: '<': signed/unsigned mismatch
+  Parowanie.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  PanelPrzewijania.cpp
+  Osada.cpp
+  MaszynaLosujaca.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\maszynalosujaca.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-f:\visualcppworkspace\osadnicy\osadnicy\maszynalosujaca.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  MainWindow.cpp
+  main.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  LosowaPlanszaBuilder.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(5): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+  Compiling...
+  Kostka.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\kostka.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Konwerter.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+f:\visualcppworkspace\osadnicy\osadnicy\konwerter.cpp(30): warning C4018: '<': signed/unsigned mismatch
+  HUD.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\hud.cpp(13): warning C4018: '<': signed/unsigned mismatch
+  Gracz.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\gracz.cpp(25): warning C4018: '<': signed/unsigned mismatch
+  Gra.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  DystrybutorWartosci.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\dystrybutorwartosci.cpp(7): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+f:\visualcppworkspace\osadnicy\osadnicy\dystrybutorwartosci.cpp(31): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
+f:\visualcppworkspace\osadnicy\osadnicy\dystrybutorwartosci.cpp(69): warning C4018: '<': signed/unsigned mismatch
+  DystrybutorTekstur.cpp
+  DystrybutorCzcionek.cpp
+  DrogaLeaf.cpp
+  Droga.cpp
+  BudynekLeaf.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\budynekleaf.cpp(11): warning C4244: 'argument': conversion from 'double' to 'sf::Uint8', possible loss of data
+  Generating Code...
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.exe
   Osadnicy.vcxproj -> F:\VisualCPPWorkspace\Osadnicy\Debug\Osadnicy.pdb (Partial PDB)

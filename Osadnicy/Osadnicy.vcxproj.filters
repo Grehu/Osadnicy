@@ -58,6 +58,12 @@
     <Filter Include="Header Files\Model\Losowania">
       <UniqueIdentifier>{899bef52-0d20-4335-9a4a-978293c7d8a0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\View\HUD">
+      <UniqueIdentifier>{3914a4e0-dfd4-4139-9810-ed2172706182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\View\Obiekty">
+      <UniqueIdentifier>{8083985c-a41d-4301-9f02-4730784cf8ec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -141,6 +147,18 @@
     <ClCompile Include="MaszynaLosujaca.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Konwerter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Ustawienia.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PanelPrzewijania.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Sytuacja.hpp">
@@ -157,33 +175,6 @@
     </ClInclude>
     <ClInclude Include="EfektRycerza.hpp">
       <Filter>Header Files\Model\Karty</Filter>
-    </ClInclude>
-    <ClInclude Include="Karta.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="BudynekLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="DrogaLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="PoleLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="PoleWartosciLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="PortLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="RamkaLeaf.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="RysunekComponent.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
-    <ClInclude Include="RysunekComposite.hpp">
-      <Filter>Header Files\View</Filter>
     </ClInclude>
     <ClInclude Include="Plansza.hpp">
       <Filter>Header Files\Model\Plansza</Filter>
@@ -239,9 +230,6 @@
     <ClInclude Include="Obszar.hpp">
       <Filter>Header Files\Model\Struktury</Filter>
     </ClInclude>
-    <ClInclude Include="Stale.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
     <ClInclude Include="DystrybutorWartosci.hpp">
       <Filter>Header Files\Controler\Budowniczy</Filter>
     </ClInclude>
@@ -251,9 +239,6 @@
     <ClInclude Include="Etykieta.hpp">
       <Filter>Header Files\Controler\Budowniczy</Filter>
     </ClInclude>
-    <ClInclude Include="PrzeznaczenieFontu.hpp">
-      <Filter>Header Files\View</Filter>
-    </ClInclude>
     <ClInclude Include="Parowanie.hpp">
       <Filter>Header Files\Controler\Budowniczy</Filter>
     </ClInclude>
@@ -262,6 +247,54 @@
     </ClInclude>
     <ClInclude Include="MaszynaLosujaca.hpp">
       <Filter>Header Files\Model\Losowania</Filter>
+    </ClInclude>
+    <ClInclude Include="Konwerter.hpp">
+      <Filter>Header Files\Controler\Budowniczy</Filter>
+    </ClInclude>
+    <ClInclude Include="BudynekLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="DrogaLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="Karta.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="PoleWartosciLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="PortLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="PrzeznaczenieFontu.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="RamkaLeaf.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComponent.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="RysunekComposite.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="Stale.hpp">
+      <Filter>Header Files\View\Obiekty</Filter>
+    </ClInclude>
+    <ClInclude Include="PanelPrzewijania.hpp">
+      <Filter>Header Files\View\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="Ustawienia.hpp">
+      <Filter>Header Files\Controler</Filter>
+    </ClInclude>
+    <ClInclude Include="Kierunek.hpp">
+      <Filter>Header Files\View\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="HUD.hpp">
+      <Filter>Header Files\View\HUD</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

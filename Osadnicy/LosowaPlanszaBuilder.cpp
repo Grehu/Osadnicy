@@ -14,7 +14,7 @@ Surowiec LosowaPlanszaBuilder::losujSurowiec()
 
 void LosowaPlanszaBuilder::budujPlansze()
 {
-	plansza = new Plansza();
+	if (plansza == nullptr) plansza = new Plansza();
 }
 
 void LosowaPlanszaBuilder::budujMorze()
@@ -110,7 +110,7 @@ void LosowaPlanszaBuilder::budujPole(Surowiec surowiec)
 	ramka->ustawPozycje(pozycja);
 	wartosc->ustawKsztalt(tworzKolo(Etykieta::wartosc));
 	wartosc->ustawPozycje(pozycja);
-	wartosc->przypiszText(*czcionki->pobierzLosowaCzcionke(PrzeznaczenieFontu::wartosc), "0");
+	wartosc->przypiszText(*czcionki->pobierzLosowaCzcionke(PrzeznaczenieFontu::wartosc), "3");
 
 	RysunekComposite * kompozyt = new RysunekComposite();
 

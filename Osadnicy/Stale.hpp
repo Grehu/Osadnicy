@@ -2,7 +2,7 @@
 #include <SFML\Graphics.hpp>
 using namespace sf;
 const Vector2f PRZESUNIECIE_POLE_WARTOSCI = Vector2f(94.0f, 94.0f);
-const Vector2f PRZESUNIECIE_TEKSTU_WARTOSCI = Vector2f(105.0f, 90.0f);
+const Vector2f PRZESUNIECIE_TEKSTU_WARTOSCI = Vector2f(104.0f, 89.0f);
 
 const float PRZESUNIECIE_X = 224.0f;
 const float PRZESUNIECIE_Y = 192.0f;
