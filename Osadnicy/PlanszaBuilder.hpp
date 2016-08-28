@@ -19,7 +19,7 @@ protected:
 	Koordynaty wskaznik = { 0,0 };
 	//Tworzenie ksztaltow
 	virtual Shape * tworzSzescian(Etykieta etykieta) = 0;
-	virtual Shape * tworzProstokat(Etykieta etykieta, int orientacja) = 0;
+	virtual Shape * tworzProstokat(Etykieta etykieta) = 0;
 	virtual Shape * tworzKolo(Etykieta etykieta) = 0;
 
 	//Tworzenie tekstow
@@ -51,6 +51,7 @@ public:
 	virtual void budujPortZwykly() = 0;
 	virtual void budujPortSpecjalistyczny() = 0;
 	virtual void budujPortSpecjalistyczny(Surowiec surowiec) = 0;
+	virtual void wykonczPlansze() = 0;
 
 	//Nawigacja
 	virtual void nastepnaKolumna() { wskaznik.x++; };

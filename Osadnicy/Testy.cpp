@@ -231,11 +231,77 @@ void Test::testWyswietlania()
 
 Text Test::testDystrybutoraCzcionek()
 {
+
 	Text tekst;
 	string tresc = "test";
 	tekst.setFont(*czcionki->pobierzLosowaCzcionke(menu));
 	tekst.setCharacterSize(56);
-	tekst.setColor(Color(0, 0, 0));
+	tekst.setColor(Color(255,255,255));
 	tekst.setString(tresc);
 	return tekst;
 }
+
+void Test::inicjujTestLokalizacjiOsad()
+{
+	CircleShape * kulka;
+
+	for (int i = 0; i < 15; i++) {
+		for (int j = 0;j < 15;j++) {
+			kulka = new CircleShape;
+			kulka->setPosition(OSADA_BAZA_X + (PRZESUNIECIE_X * i / 2), OSADA_BAZA_Y + (PRZESUNIECIE_Y * j) + ((i+j)%2? 0.0f : OSADA_PRZESUNIECIE_DODATKOWE_Y));
+			kulka->setRadius(32.0f);
+			kulka->setFillColor(Color(255, 255, 255, 224));
+			dzialki.push_back(kulka);
+		}
+	}
+}
+
+void Test::wyswietlOsady()
+{
+	for (int i = 0; i < dzialki.size(); i++) {
+		okno->draw(*dzialki[i]);
+	}
+}
+
+void Test::inicjujTestLokalizacjiDrog()
+{
+	RectangleShape * prostokat;
+
+	for (int i = 0; i < 15; i++) {
+		for (int j = 0;j < 15;j++) {
+			prostokat = new RectangleShape;
+			prostokat->setPosition(i%2? DROGA_BAZA_PION + (((i+1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) +(PRZESUNIECIE_X*j): DROGA_BAZA_X + (PRZESUNIECIE_X*j / 2) , i*PRZESUNIECIE_Y/2 + DROGA_BAZA_Y);
+			prostokat->setOrigin(Vector2f(64.0f, 8.0f));
+			prostokat->setRotation(i % 2 ? 90 : (i % 4 ? (j % 2 ? 150 : 30) : (j % 2 ? 30 : 150)));
+			prostokat->setSize(Vector2f(128.0f, 16.0f));
+			prostokat->setFillColor(Color(255, 255, 255, 224));
+			drozki.push_back(prostokat);
+		}
+	}
+}
+
+void Test::wyswietlDrogi()
+{
+	for (int i = 0; i < drozki.size(); i++) {
+		okno->draw(*drozki[i]);
+	}
+}
+
+void Test::inicjujTestLokalizacjiPortow()
+{
+	CircleShape * kolo;
+
+	for (int i = 0; i < 15; i++) {
+		for (int j = 0;j < 15;j++) {
+			kolo = new CircleShape;
+			kolo->setPosition(i % 2 ? DROGA_BAZA_PION + (((i + 1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) + (PRZESUNIECIE_X*j) : DROGA_BAZA_X + (PRZESUNIECIE_X*j / 2), i*PRZESUNIECIE_Y / 2 + DROGA_BAZA_Y);
+			kolo->setOrigin(Vector2f(32.0f, 32.0f));
+			kolo->setRadius(32.0f);
+
+			kolo->setFillColor(Color(0, 255, 255, 224));
+			dzialki.push_back(kolo);
+		}
+	}
+}
+
+

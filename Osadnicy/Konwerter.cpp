@@ -10,14 +10,14 @@ void Konwerter::przypiszBudowniczego(PlanszaBuilder * budowniczy)
 	this->budowniczy = budowniczy;
 }
 
-void Konwerter::wczytajSchemat(string & schemat)
+void Konwerter::wczytajSchematS(string & schemat)
 {
-	this->schemat = schemat;
+	this->schematS = schemat;
 }
 
-void Konwerter::wczytajSchemat(string * schemat)
+void Konwerter::wczytajSchematS(string * schemat)
 {
-	this->schemat = *schemat;
+	this->schematS = *schemat;
 }
 
 void Konwerter::przetworzSchemat()
@@ -27,8 +27,8 @@ void Konwerter::przetworzSchemat()
 	}
 	budowniczy->budujPlansze();
 	char znak;
-	for (int i = 0; i < schemat.length(); i++) {
-		znak = schemat[i];
+	for (int i = 0; i < schematS.length(); i++) {
+		znak = schematS[i];
 		switch (znak) {
 		case 'N': budowniczy->nastepnaKolumna(); break;
 		case '-': budowniczy->nastepnyWiersz(); break;

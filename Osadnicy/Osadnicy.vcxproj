@@ -131,6 +131,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MainWindow.cpp" />
     <ClCompile Include="MaszynaLosujaca.cpp" />
+    <ClCompile Include="MenagerEfektow.cpp" />
     <ClCompile Include="Osada.cpp" />
     <ClCompile Include="PanelPrzewijania.cpp" />
     <ClCompile Include="Parowanie.cpp" />
@@ -169,6 +170,7 @@
     <ClInclude Include="Kostka.hpp" />
     <ClInclude Include="LosowaPlanszaBuilder.hpp" />
     <ClInclude Include="MaszynaLosujaca.hpp" />
+    <ClInclude Include="MenagerEfektow.hpp" />
     <ClInclude Include="Obszar.hpp" />
     <ClInclude Include="OcenPlanszaBuilder.hpp" />
     <ClInclude Include="Osada.hpp" />

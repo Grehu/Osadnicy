@@ -64,6 +64,9 @@
     <Filter Include="Header Files\View\Obiekty">
       <UniqueIdentifier>{8083985c-a41d-4301-9f02-4730784cf8ec}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\View\Efekty">
+      <UniqueIdentifier>{c538359e-403a-401b-b289-7673e934cf3a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -157,6 +160,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HUD.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MenagerEfektow.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -295,6 +301,9 @@
     </ClInclude>
     <ClInclude Include="HUD.hpp">
       <Filter>Header Files\View\HUD</Filter>
+    </ClInclude>
+    <ClInclude Include="MenagerEfektow.hpp">
+      <Filter>Header Files\View\Efekty</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

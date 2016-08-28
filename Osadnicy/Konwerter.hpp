@@ -5,12 +5,12 @@ class Konwerter {
 private:
 	Plansza * plansza;
 	PlanszaBuilder * budowniczy;
-	string schemat = "MMMMMMMM-MMZGWMM-MMKDKZMM-MDZGZDM-MMGWWGMM-MMDPWMM-MMMMMMMM";
+	string schematS = "MMMMMMMM-MMZGWMM-MMKDKZMM-MDZGZDM-MMGWWGMM-MMDPWMM-MMMMMMMM";
 public:
 	void przypiszBudowniczego(PlanszaBuilder & budowniczy);
 	void przypiszBudowniczego(PlanszaBuilder * budowniczy);
-	void wczytajSchemat(string & schemat);
-	void wczytajSchemat(string * schemat);
+	void wczytajSchematS(string & schemat);
+	void wczytajSchematS(string * schemat);
 	void przetworzSchemat();
 	Plansza * zwrocPlansze();
 };

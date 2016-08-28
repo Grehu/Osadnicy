@@ -8,6 +8,7 @@
 #include "Ustawienia.hpp"
 #include "PanelPrzewijania.hpp"
 #include "HUD.hpp"
+#include "MenagerEfektow.hpp"
 
 class Test {
 private:
@@ -20,6 +21,9 @@ private:
 	DystrybutorWartosci * wartosci;
 	Plansza * plansza;
 	HUD * hud;
+	MenagerEfektow * me;
+	vector<CircleShape*> dzialki;
+	vector<RectangleShape*> drozki;
 public:
 	void testPrzyporzadkowaniaPortu();
 	void testPrzyporzadkowaniaOsady();
@@ -32,5 +36,10 @@ public:
 	void testBudowaniaPustyni();
 	void testWyswietlania();
 	Text testDystrybutoraCzcionek();
+	void inicjujTestLokalizacjiOsad();
+	void wyswietlOsady();
+	void inicjujTestLokalizacjiDrog();
+	void wyswietlDrogi();
+	void inicjujTestLokalizacjiPortow();
 
 };

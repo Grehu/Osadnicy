@@ -2,6 +2,10 @@
   Ustawienia.cpp
   Testy.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(261): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(275): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(285): warning C4018: '<': signed/unsigned mismatch
   RysunekComposite.cpp
   RysunekComponent.cpp
   RamkaLeaf.cpp
@@ -28,17 +32,20 @@ f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(63): warning C4018: '<': sig
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
   PanelPrzewijania.cpp
   Osada.cpp
+  MenagerEfektow.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
   MaszynaLosujaca.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\maszynalosujaca.cpp(7): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   MainWindow.cpp
   main.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
+  Compiling...
   LosowaPlanszaBuilder.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
 f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(5): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(193): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  Generating Code...
-  Compiling...
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(203): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Kostka.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\kostka.cpp(6): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Konwerter.cpp

@@ -7,7 +7,7 @@ class LosowaPlanszaBuilder : public PlanszaBuilder {
 protected:
 	//Tworzenie ksztaltow
 	virtual Shape * tworzSzescian(Etykieta etykieta);
-	virtual Shape * tworzProstokat(Etykieta etykieta, int orientacja);
+	virtual Shape * tworzProstokat(Etykieta etykieta);
 	virtual Shape * tworzKolo(Etykieta etykieta);
 
 	//Tworzenie tekstow
@@ -38,6 +38,8 @@ public:
 	virtual void budujPortZwykly() {};//TODO
 	virtual void budujPortSpecjalistyczny();
 	virtual void budujPortSpecjalistyczny(Surowiec surowiec);
+	virtual void wykonczPlansze();
+	
 
 	virtual Plansza * zwrocPlansze() { return plansza; };
 };

@@ -41,6 +41,7 @@ void LosowaPlanszaBuilder::budujMorze()
 
 	nowe.grafika = kompozyt;
 	nowe.odmiana = Odmiana::morze;
+	nowe.obiekt = tworzObiektPola(Surowiec::nic);
 
 	plansza->wstawPole(nowe);
 }
@@ -73,6 +74,7 @@ void LosowaPlanszaBuilder::budujPustynie()
 
 	nowe.grafika = kompozyt;
 	nowe.odmiana = Odmiana::pustynia;
+	nowe.obiekt = tworzObiektPola(Surowiec::nic);
 
 	plansza->wstawPole(nowe);
 }
@@ -123,6 +125,7 @@ void LosowaPlanszaBuilder::budujPole(Surowiec surowiec)
 
 	nowe.grafika = kompozyt;
 	nowe.odmiana = Odmiana::poleSurowcow;
+	nowe.obiekt = tworzObiektPola(surowiec);
 
 	plansza->wstawPole(nowe);
 	/*Text * text = new Text;
@@ -179,6 +182,11 @@ void LosowaPlanszaBuilder::budujPortSpecjalistyczny(Surowiec surowiec)
 	
 }
 
+void LosowaPlanszaBuilder::wykonczPlansze()
+{
+
+}
+
 Shape * LosowaPlanszaBuilder::tworzSzescian(Etykieta etykieta)
 {
 	Shape * ksztalt = new CircleShape(128, 6);
@@ -186,11 +194,14 @@ Shape * LosowaPlanszaBuilder::tworzSzescian(Etykieta etykieta)
 	return ksztalt;
 }
 
-Shape * LosowaPlanszaBuilder::tworzProstokat(Etykieta etykieta, int orientacja)
+Shape * LosowaPlanszaBuilder::tworzProstokat(Etykieta etykieta)
 {
-	Shape * ksztalt = new RectangleShape(Vector2f(128, 16));
+	Shape * ksztalt = new RectangleShape(Vector2f(128.0f, 16.0f));
 	ksztalt->setTexture(tekstury->pobierzLosowaTeksture(etykieta));
-	ksztalt->setRotation(orientacja);
+	ksztalt->setPosition(wskaznik.x % 2 ? DROGA_BAZA_PION + (((wskaznik.x + 1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) + (PRZESUNIECIE_X*wskaznik.y) : DROGA_BAZA_X + (PRZESUNIECIE_X*wskaznik.y / 2), wskaznik.x*PRZESUNIECIE_Y / 2 + DROGA_BAZA_Y);
+	ksztalt->setOrigin(Vector2f(64.0f, 8.0f));
+	ksztalt->setRotation(wskaznik.x % 2 ? 90 : (wskaznik.x % 4 ? (wskaznik.y % 2 ? 150 : 30) : (wskaznik.y % 2 ? 30 : 150)));
+	ksztalt->setFillColor(Color(55, 55, 55, 128));
 	return ksztalt;
 }
 

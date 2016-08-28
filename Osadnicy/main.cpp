@@ -235,10 +235,44 @@ int main() {
 	test.inicjalizacjaInterfejsu();
 	//test.testBudowaniaPola();
 	//test.testBudowaniaMorza();
+	/*
+	float bazaX = -16.0f;
+	float przesX = 224.0f;
+	float bazaY = -24.0f;
+	float przesY = 192.0f;
+	float troche = 48.0f;
 
+	CircleShape kulka;
+	kulka.setPosition(OSADA_BAZA_X+(PRZESUNIECIE_X*0), OSADA_BAZA_Y+(PRZESUNIECIE_Y*0));
+	kulka.setRadius(32.0f);
+	kulka.setFillColor(Color(0, 0, 0));
+	MenagerEfektow me(Color(255, 255, 255), Color(255, 0, 0));
+	me.dodajKolor(Color(0, 255, 0));
+	me.dodajKolor(Color(0, 0, 255));
 
+	CircleShape kulka2;
+	kulka2.setPosition(bazaX + (przesX * 1), bazaY + (przesY * 0));
+	kulka2.setRadius(32.0f);
+	kulka2.setFillColor(Color(0, 0, 0));
 
+	CircleShape kulka3;
+	kulka3.setPosition(bazaX + (przesX * 1) + MODYFIKATOR_KOLUMNY_PARZYSTEJ, bazaY + (przesY * 1) + troche);
+	kulka3.setRadius(32.0f);
+	kulka3.setFillColor(Color(0, 0, 0));
 
+	CircleShape kulka4;
+	kulka4.setPosition(bazaX + (przesX * 0), bazaY + (przesY * 1));
+	kulka4.setRadius(32.0f);
+	kulka4.setFillColor(Color(0, 0, 0));
+	
+	CircleShape kulka5;
+	kulka5.setPosition(bazaX + (przesX * 2) + MODYFIKATOR_KOLUMNY_PARZYSTEJ, bazaY + (przesY * 1));
+	kulka5.setRadius(32.0f);
+	kulka5.setFillColor(Color(0, 0, 0));
+	*/
+	test.inicjujTestLokalizacjiOsad();
+	test.inicjujTestLokalizacjiDrog();
+	test.inicjujTestLokalizacjiPortow();
 	while (oknoAplikacji.isOpen())
 	{
 
@@ -281,6 +315,15 @@ int main() {
 		//plansza->wyswietlPola(oknoAplikacji, przewijanie);
 		test.testWyswietlania();
 		oknoAplikacji.draw(test.testDystrybutoraCzcionek());
+		/*oknoAplikacji.draw(kulka);
+		me.mieszaj();
+		kulka.setFillColor(me.pobierzKolor());
+		oknoAplikacji.draw(kulka2);
+		oknoAplikacji.draw(kulka3);
+		oknoAplikacji.draw(kulka4);
+		oknoAplikacji.draw(kulka5);*/
+		test.wyswietlOsady();
+		test.wyswietlDrogi();
 		oknoAplikacji.display();
 
 	}
