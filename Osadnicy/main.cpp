@@ -322,8 +322,8 @@ int main() {
 		oknoAplikacji.draw(kulka3);
 		oknoAplikacji.draw(kulka4);
 		oknoAplikacji.draw(kulka5);*/
-		test.wyswietlOsady();
-		test.wyswietlDrogi();
+		//test.wyswietlOsady();
+		//test.wyswietlDrogi();
 		oknoAplikacji.display();
 
 	}

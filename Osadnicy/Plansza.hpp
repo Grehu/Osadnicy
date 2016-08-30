@@ -7,6 +7,9 @@
 #include "Obszar.hpp"
 
 #include "RysunekComposite.hpp"
+#include "PortLeaf.hpp"
+#include "DrogaLeaf.hpp"
+#include "BudynekLeaf.hpp"
 
 class Plansza {
 protected:

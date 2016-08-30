@@ -28,12 +28,15 @@ private:
 	bool gotowoscDoPrzejscia = false;
 	//Funkcje pomocnicze
 	void ustawPrzyrosty();
+	void ustawPrzyrosty(int pierwszy, int drugi);
 	
 
 	
 public:
 	MenagerEfektow(Color & poczatkowy, Color & docelowy);
 	void dodajKolor(Color & kolor);
+	void resetujKolory();
 	void mieszaj();
+	void popchnij(int aktualny, int docelowy);
 	Color pobierzKolor();
 };

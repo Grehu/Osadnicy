@@ -1,5 +1,20 @@
 #include "LosowaPlanszaBuilder.hpp"
 
+Vector2f LosowaPlanszaBuilder::ustawPozycjeDrogi()
+{
+	return Vector2f(wskaznik.y % 2 ? DROGA_BAZA_PION + (((wskaznik.y + 1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) + (PRZESUNIECIE_X*wskaznik.x) : DROGA_BAZA_X + (PRZESUNIECIE_X*wskaznik.x / 2), wskaznik.y*PRZESUNIECIE_Y / 2 + DROGA_BAZA_Y);
+}
+
+Vector2f LosowaPlanszaBuilder::ustawPozycjePortu()
+{
+	return Vector2f(wskaznik.y % 2 ? DROGA_BAZA_PION + (((wskaznik.y + 1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) + (PRZESUNIECIE_X*wskaznik.x) : DROGA_BAZA_X + (PRZESUNIECIE_X*wskaznik.x / 2), wskaznik.y*PRZESUNIECIE_Y / 2 + DROGA_BAZA_Y);
+}
+
+int LosowaPlanszaBuilder::ustawOrientacjeDrogi()
+{
+	return (wskaznik.y % 2 ? 90 : (wskaznik.y % 4 ? (wskaznik.x % 2 ? 150 : 30) : (wskaznik.x % 2 ? 30 : 150)));
+}
+
 Surowiec LosowaPlanszaBuilder::losujSurowiec()
 {
 	srand(time(NULL));
@@ -19,6 +34,7 @@ void LosowaPlanszaBuilder::budujPlansze()
 
 void LosowaPlanszaBuilder::budujMorze()
 {
+	zmianaTrybu(TrybEdycji::budowaPol);
 	Obszar<Pole> nowe;
 	Vector2f pozycja(ustawPozycjePola());
 	
@@ -48,6 +64,7 @@ void LosowaPlanszaBuilder::budujMorze()
 
 void LosowaPlanszaBuilder::budujPustynie()
 {
+	zmianaTrybu(TrybEdycji::budowaPol);
 	Obszar<Pole> nowe;
 	Vector2f pozycja(ustawPozycjePola());
 	
@@ -79,6 +96,47 @@ void LosowaPlanszaBuilder::budujPustynie()
 	plansza->wstawPole(nowe);
 }
 
+void LosowaPlanszaBuilder::budujObszarMieszkalny(bool blokada)
+{
+	zmianaTrybu(TrybEdycji::budowaOsad);
+	Obszar<Osada> nowe;
+	Shape * grafika0 = tworzKolo(Etykieta::ciemnosc);
+	Shape * grafika1 = tworzKolo(Etykieta::wioska);
+	Shape * grafika2 = tworzKolo(Etykieta::miasto);
+
+	BudynekLeaf * kompozyt = new BudynekLeaf;
+	kompozyt->ustawGrafiki(grafika0, grafika1, grafika2);
+	kompozyt->ustawKolorRamki(Color(55, 55, 55));
+	kompozyt->ustawPozycje(ustawPozycjeOsady());
+	
+	nowe.grafika = kompozyt;
+	nowe.obiekt = tworzObiektOsady();
+	nowe.odmiana = blokada? Odmiana::miejsceNiedostepne : Odmiana::miejsceDostepne;
+
+	plansza->wstawOsade(nowe);
+}
+
+void LosowaPlanszaBuilder::budujDroge(bool blokada)
+{
+	zmianaTrybu(TrybEdycji::budowaDrog);
+	Obszar<Droga> nowe;
+
+	Shape * ksztalt = tworzProstokat(Etykieta::droga);
+
+	ksztalt->setRotation(ustawOrientacjeDrogi());
+	
+	DrogaLeaf * komponent = new DrogaLeaf;
+	komponent->ustawKolor(Color(55, 55, 55, 55));
+	komponent->ustawKsztalt(ksztalt);
+	komponent->ustawPozycje(ustawPozycjeDrogi());
+
+	nowe.grafika = komponent;
+	nowe.obiekt = tworzObiektDrogi();
+	nowe.odmiana = blokada ? Odmiana::miejsceNiedostepne : Odmiana::miejsceDostepne;
+
+	plansza->wstawDroge(nowe);
+}
+
 void LosowaPlanszaBuilder::budujPole()
 {
 	budujPole(losujSurowiec());
@@ -91,16 +149,10 @@ void LosowaPlanszaBuilder::budujPortSpecjalistyczny()
 
 void LosowaPlanszaBuilder::budujPole(Surowiec surowiec)
 {
+	zmianaTrybu(TrybEdycji::budowaPol);
 	Obszar<Pole> nowe;
 	Vector2f pozycja(ustawPozycjePola());
-	Etykieta etykieta;
-	switch (surowiec) {
-	case Surowiec::drewno: etykieta = Etykieta::drewno; break;
-	case Surowiec::glina: etykieta = Etykieta::glina; break;
-	case Surowiec::welna: etykieta = Etykieta::welna; break;
-	case Surowiec::zboze: etykieta = Etykieta::zboze; break;
-	case Surowiec::kamien: etykieta = Etykieta::kamien; break;
-	}
+	Etykieta etykieta = konwertujSurowiec(surowiec);
 
 	PoleWartosciLeaf * wartosc = new PoleWartosciLeaf();
 	RamkaLeaf * ramka = new RamkaLeaf();
@@ -125,66 +177,120 @@ void LosowaPlanszaBuilder::budujPole(Surowiec surowiec)
 
 	nowe.grafika = kompozyt;
 	nowe.odmiana = Odmiana::poleSurowcow;
+
 	nowe.obiekt = tworzObiektPola(surowiec);
+	nowe.obiekt.ustawSurowiec(surowiec);
+	nowe.obiekt.ustawWartosc(3);
+	
 
 	plansza->wstawPole(nowe);
-	/*Text * text = new Text;
-	text->setFont(*czcionki->pobierzKonkretnaCzcionke("wartosc", 0));
-	text->setCharacterSize(56);
-	text->setColor(Color(0, 0, 0));
-	text->setString("0");
 
-	CircleShape * poleGrafika = new CircleShape(128, 6);
-	poleGrafika->setTexture(tekstury->pobierzLosowaTeksture(surowiec));
-	CircleShape * ramkaGrafika = new CircleShape(128, 6);
-	ramkaGrafika->setTexture(tekstury->pobierzLosowaTeksture("ramka"));
-	CircleShape * poleWartosciGrafika = new CircleShape(32);
-	poleWartosciGrafika->setTexture(tekstury->pobierzLosowaTeksture("poleWartosci"));
-	CircleShape * zlodziejGrafika = new CircleShape(32);
-	zlodziejGrafika->setTexture(tekstury->pobierzLosowaTeksture("zlodziej"));
+	//TO CHECK
+}
 
-	PoleLeaf * poleRC = new PoleLeaf;
-	RamkaLeaf * ramkaRC = new RamkaLeaf;
-	PoleWartosciLeaf * poleWartosciRC = new PoleWartosciLeaf;
-	RysunekComposite * kompozytRC = new RysunekComposite;
+void LosowaPlanszaBuilder::budujPortZwykly()
+{
+	zmianaTrybu(TrybEdycji::budowaPortow);
+	Obszar<Port> nowe;
 
-	poleRC->ustawKsztalt(*poleGrafika);
-	poleRC->ustawPozycje(plansza->pobierzPozycjePola(wskaznik));
-	ramkaRC->ustawKsztalt(*ramkaGrafika);
-	ramkaRC->ustawPozycje(plansza->pobierzPozycjePola(wskaznik));
-	poleWartosciRC->ustawKsztalt(*poleWartosciGrafika);
-	poleWartosciRC->nadajZlodziejowiGrafike(*zlodziejGrafika);
-	poleWartosciRC->przypiszText(*text);
-	poleWartosciRC->ustawPozycje(plansza->pobierzPozycjePola(wskaznik));
-	kompozytRC->ustawPole(*poleRC);
-	kompozytRC->ustawRamke(*ramkaRC);
-	kompozytRC->ustawWartosc(*poleWartosciRC);
-	std::cout << "Wskaznik: " << wskaznik.x << " " << wskaznik.y << endl;
-	std:cout << "Pozycja kompozytu ustawiana jest na" << plansza->pobierzPozycjePola(wskaznik)->x << " " << plansza->pobierzPozycjePola(wskaznik)->y << endl;
-	kompozytRC->ustawPozycje(plansza->pobierzPozycjePola(wskaznik));
+	Shape * ksztalt = tworzKolo(Etykieta::port);
+	ksztalt->setOrigin(32.0f, 32.0f);
+	Vector2f pozycja = ustawPozycjePortu();
 
-	plansza->ustawGrafikePola(wskaznik, *kompozytRC);
-	delete kompozytRC;
+	PortLeaf * komponent = new PortLeaf;
+	komponent->ustawKolory(Color(55, 55, 55), Color(55, 55, 55));
+	komponent->ustawKsztalt(ksztalt);
+	komponent->ustawSurowiec(ksztalt);
+	komponent->ustawPozycje(pozycja);
 
-	Pole * pole = new Pole;
-	pole->ustawSurowiec(surowiec);
-	pole->ustawWartosc(0);
-	
-	plansza->ustawPole(wskaznik, *pole);
-	delete pole;
+	nowe.grafika = komponent;
+	nowe.obiekt = tworzObiektPortu(Surowiec::nic);
+	nowe.odmiana = Odmiana::wybrzeze;
 
-	wskaznik.x++;*/
-	//TODO
+	plansza->wstawPort(nowe);
 }
 
 void LosowaPlanszaBuilder::budujPortSpecjalistyczny(Surowiec surowiec)
 {
+	zmianaTrybu(TrybEdycji::budowaPortow);
+	Obszar<Port> nowe;
 	
+	Shape * ksztalt = tworzKolo(Etykieta::port);
+	Shape * ksztalt2 = tworzKolo(przetworzEtykieteSurowca(konwertujSurowiec(surowiec)));
+	ksztalt->setOrigin(32.0f, 32.0f);
+	ksztalt2->setOrigin(32.0f, 32.0f);
+	Vector2f pozycja = ustawPozycjePortu();
+
+	PortLeaf * komponent = new PortLeaf;
+	komponent->ustawKolory(Color(55, 55, 55), Color(55, 55, 55));
+	komponent->ustawKsztalt(ksztalt);
+	komponent->ustawSurowiec(ksztalt2);
+	komponent->ustawPozycje(pozycja);
+
+	nowe.grafika = komponent;
+	nowe.obiekt = tworzObiektPortu(surowiec);
+	nowe.odmiana = Odmiana::wybrzeze;
+
+	plansza->wstawPort(nowe);
 }
+
 
 void LosowaPlanszaBuilder::wykonczPlansze()
 {
+	Koordynaty koordynaty;
+	Koordynaty koordynatySprawdzane;
+	Pole * p_sasiad1;
+	Pole * p_sasiad2;
+	Pole * p_sasiad3;
+	Osada * o_sasiad1;
+	Osada * o_sasiad2;
+	for (int i = 0; i < plansza->osady.size(); i++) {
+		for (int j = 0; j < plansza->osady[i].size(); j++) {
+			if (plansza->osady[i][j].odmiana == Odmiana::miejsceDostepne) {
+				koordynaty.x = i;
+				koordynaty.y = j;
 
+				koordynatySprawdzane = Parowanie::poleDlaOsady_1(koordynaty);
+				p_sasiad1 = &plansza->pobierzPole(koordynatySprawdzane)->obiekt;
+				koordynatySprawdzane = Parowanie::poleDlaOsady_2(koordynaty);
+				p_sasiad2 = &plansza->pobierzPole(koordynatySprawdzane)->obiekt;
+				koordynatySprawdzane = Parowanie::poleDlaOsady_3(koordynaty);
+				p_sasiad3 = &plansza->pobierzPole(koordynatySprawdzane)->obiekt;
+
+				plansza->osady[i][j].obiekt.ustawSasiadow(p_sasiad1, p_sasiad2, p_sasiad3);
+			}
+		}
+	}
+	for (int i = 0; i < plansza->drogi.size(); i++) {
+		for (int j = 0; j < plansza->drogi[i].size(); j++) {
+			if (plansza->drogi[i][j].odmiana == Odmiana::miejsceDostepne) {
+				koordynaty.x = i;
+				koordynaty.y = j;
+
+				koordynatySprawdzane = Parowanie::osadaDlaDrogi_1(koordynaty);
+				o_sasiad1 = &plansza->pobierzOsade(koordynatySprawdzane)->obiekt;
+				koordynatySprawdzane = Parowanie::osadaDlaDrogi_2(koordynaty);
+				o_sasiad2 = &plansza->pobierzOsade(koordynatySprawdzane)->obiekt;
+
+				plansza->drogi[i][j].obiekt.ustawWezly(o_sasiad1, o_sasiad2);
+			}
+		}
+	}
+	for (int i = 0; i < plansza->porty.size(); i++) {
+		for (int j = 0; j < plansza->porty[i].size(); j++) {
+			if (plansza->porty[i][j].odmiana == Odmiana::wybrzeze) {
+				koordynaty.x = i;
+				koordynaty.y = j;
+
+				koordynatySprawdzane = Parowanie::osadaDlaDrogi_1(koordynaty);
+				o_sasiad1 = &plansza->pobierzOsade(koordynatySprawdzane)->obiekt;
+				koordynatySprawdzane = Parowanie::osadaDlaDrogi_2(koordynaty);
+				o_sasiad2 = &plansza->pobierzOsade(koordynatySprawdzane)->obiekt;
+
+				plansza->porty[i][j].obiekt.dodajKlientow(o_sasiad1, o_sasiad2);
+			}
+		}
+	}
 }
 
 Shape * LosowaPlanszaBuilder::tworzSzescian(Etykieta etykieta)
@@ -198,9 +304,7 @@ Shape * LosowaPlanszaBuilder::tworzProstokat(Etykieta etykieta)
 {
 	Shape * ksztalt = new RectangleShape(Vector2f(128.0f, 16.0f));
 	ksztalt->setTexture(tekstury->pobierzLosowaTeksture(etykieta));
-	ksztalt->setPosition(wskaznik.x % 2 ? DROGA_BAZA_PION + (((wskaznik.x + 1) % 4) ? 0.0f : MODYFIKATOR_RZEDU_NIEPARZYSTEGO) + (PRZESUNIECIE_X*wskaznik.y) : DROGA_BAZA_X + (PRZESUNIECIE_X*wskaznik.y / 2), wskaznik.x*PRZESUNIECIE_Y / 2 + DROGA_BAZA_Y);
 	ksztalt->setOrigin(Vector2f(64.0f, 8.0f));
-	ksztalt->setRotation(wskaznik.x % 2 ? 90 : (wskaznik.x % 4 ? (wskaznik.y % 2 ? 150 : 30) : (wskaznik.y % 2 ? 30 : 150)));
 	ksztalt->setFillColor(Color(55, 55, 55, 128));
 	return ksztalt;
 }
@@ -235,7 +339,7 @@ Port LosowaPlanszaBuilder::tworzObiektPortu(Surowiec surowiec)
 	Port port;
 	Koordynaty osada1 = Parowanie::osadaDlaDrogi_1(wskaznik);
 	Koordynaty osada2 = Parowanie::osadaDlaDrogi_2(wskaznik);
-	port.dodajKlientow(plansza->pobierzOsade(osada1)->obiekt, plansza->pobierzOsade(osada2)->obiekt);
+	port.dodajKlientow(&plansza->pobierzOsade(osada1)->obiekt, &plansza->pobierzOsade(osada2)->obiekt);
 	port.ustawSurowiec(surowiec);
 	return port;
 }
@@ -243,23 +347,28 @@ Port LosowaPlanszaBuilder::tworzObiektPortu(Surowiec surowiec)
 Droga LosowaPlanszaBuilder::tworzObiektDrogi()
 {
 	Droga droga;
-	Koordynaty osada1 = Parowanie::osadaDlaDrogi_1(wskaznik);
-	Koordynaty osada2 = Parowanie::osadaDlaDrogi_2(wskaznik);
-	droga.ustawWezly(&plansza->pobierzOsade(osada1)->obiekt, &plansza->pobierzOsade(osada2)->obiekt);
+	//Koordynaty osada1 = Parowanie::osadaDlaDrogi_1(wskaznik);
+	//Koordynaty osada2 = Parowanie::osadaDlaDrogi_2(wskaznik);
+	//droga.ustawWezly(&plansza->pobierzOsade(osada1)->obiekt, &plansza->pobierzOsade(osada2)->obiekt);
 	return droga;
 }
 
 Osada LosowaPlanszaBuilder::tworzObiektOsady()
 {
 	Osada osada;
-	Koordynaty pole1 = Parowanie::poleDlaOsady_1(wskaznik);
-	Koordynaty pole2 = Parowanie::poleDlaOsady_2(wskaznik);
-	Koordynaty pole3 = Parowanie::poleDlaOsady_3(wskaznik);
-	osada.ustawSasiadow(&plansza->pobierzPole(pole1)->obiekt, &plansza->pobierzPole(pole2)->obiekt, &plansza->pobierzPole(pole3)->obiekt);
+	//Koordynaty pole1 = Parowanie::poleDlaOsady_1(wskaznik);
+	//Koordynaty pole2 = Parowanie::poleDlaOsady_2(wskaznik);
+	//Koordynaty pole3 = Parowanie::poleDlaOsady_3(wskaznik);
+	//osada.ustawSasiadow(&plansza->pobierzPole(pole1)->obiekt, &plansza->pobierzPole(pole2)->obiekt, &plansza->pobierzPole(pole3)->obiekt);
 	return osada;
 }
 
 Vector2f LosowaPlanszaBuilder::ustawPozycjePola()
 {
 	return Vector2f(wskaznik.x*PRZESUNIECIE_X + ((wskaznik.y % 2) ? MODYFIKATOR_RZEDU_NIEPARZYSTEGO : 0.0f), wskaznik.y*PRZESUNIECIE_Y);
+}
+
+Vector2f LosowaPlanszaBuilder::ustawPozycjeOsady()
+{
+	return Vector2f(OSADA_BAZA_X + (PRZESUNIECIE_X * wskaznik.x / 2), OSADA_BAZA_Y + (PRZESUNIECIE_Y * wskaznik.y) + ((wskaznik.x + wskaznik.y) % 2 ? 0.0f : OSADA_PRZESUNIECIE_DODATKOWE_Y));
 }

@@ -41,7 +41,46 @@ void Konwerter::przetworzSchemat()
 		case 'P': budowniczy->budujPustynie(); budowniczy->nastepnaKolumna(); break;
 		}
 	}
+	budowniczy->skoczDo(0, 0);
+	
+	for (int i = 0; i < schematD.length(); i++) {
+			znak = schematD[i];
+			switch (znak) {
+			case 'N': budowniczy->budujDroge(true); budowniczy->nastepnaKolumna(); break;
+			case 'D': budowniczy->budujDroge(false); budowniczy->nastepnaKolumna(); break;
+			case '-': budowniczy->nastepnyWiersz(); break;
+		}
+	}
+
+	budowniczy->skoczDo(0, 0);
+
+	for (int i = 0; i < schematO.length(); i++) {
+		znak = schematO[i];
+		switch (znak) {
+		case 'N': budowniczy->budujObszarMieszkalny(true); budowniczy->nastepnaKolumna(); break;
+		case 'O': budowniczy->budujObszarMieszkalny(false); budowniczy->nastepnaKolumna(); break;
+		case '-': budowniczy->nastepnyWiersz(); break;
+		}
+	}
+
+	budowniczy->skoczDo(0, 0);
+
+	for (int i = 0; i < schematP.length(); i++) {
+		znak = schematP[i];
+		switch (znak) {
+		case 'N': budowniczy->budujFejkPort(); budowniczy->nastepnaKolumna(); break;
+		case 'P': budowniczy->budujPortZwykly(); budowniczy->nastepnaKolumna(); break;
+		case 'Z': budowniczy->budujPortSpecjalistyczny(Surowiec::zboze); budowniczy->nastepnaKolumna(); break;
+		case 'G': budowniczy->budujPortSpecjalistyczny(Surowiec::glina); budowniczy->nastepnaKolumna(); break;
+		case 'D': budowniczy->budujPortSpecjalistyczny(Surowiec::drewno); budowniczy->nastepnaKolumna(); break;
+		case 'K': budowniczy->budujPortSpecjalistyczny(Surowiec::kamien); budowniczy->nastepnaKolumna(); break;
+		case 'W': budowniczy->budujPortSpecjalistyczny(Surowiec::welna); budowniczy->nastepnaKolumna(); break;
+		case '-': budowniczy->nastepnyWiersz(); break;
+			
+		}
+	}
 	plansza = budowniczy->zwrocPlansze();
+
 }
 
 Plansza * Konwerter::zwrocPlansze()

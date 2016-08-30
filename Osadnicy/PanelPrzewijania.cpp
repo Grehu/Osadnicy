@@ -17,10 +17,10 @@ void PanelPrzewijania::przewin(RenderWindow & okno)
 {
 	if (ksztalt->getGlobalBounds().contains(Vector2f(Mouse::getPosition(okno)))) {
 		switch (kierunek) {
-		case Kierunek::dol: Ustawienia::przewijanie -= Vector2f(0.0f, 0.5f); break;
-		case Kierunek::gora: Ustawienia::przewijanie += Vector2f(0.0f, 0.5f); break;
-		case Kierunek::lewo: Ustawienia::przewijanie += Vector2f(0.5f, 0.0f); break;
-		case Kierunek::prawo: Ustawienia::przewijanie -= Vector2f(0.5f, 0.0f); break;
+		case Kierunek::dol: Ustawienia::przewijanie -= Vector2f(0.0f, 1.5f); break;
+		case Kierunek::gora: Ustawienia::przewijanie += Vector2f(0.0f, 1.5f); break;
+		case Kierunek::lewo: Ustawienia::przewijanie += Vector2f(1.5f, 0.0f); break;
+		case Kierunek::prawo: Ustawienia::przewijanie -= Vector2f(1.5f, 0.0f); break;
 		}
 	}
 }

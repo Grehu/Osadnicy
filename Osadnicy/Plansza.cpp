@@ -62,9 +62,29 @@ void Plansza::wyswietlPlansze(RenderWindow & okno, Vector2f & przewijanie)
 	for (int i = 0; i < pola.size(); i++) {
 		for (int j = 0; j < pola[i].size(); j++) {
 			pola[i][j].grafika->rysuj(okno, &przewijanie);
-//			drogi[i][j].grafika->rysuj(okno, &przewijanie);
 //			osady[i][j].grafika->rysuj(okno, &przewijanie);
 //			porty[i][j].grafika->rysuj(okno, &przewijanie);
+		}
+	}
+	for (int i = 0; i < drogi.size(); i++) {
+		for (int j = 0; j < drogi[i].size(); j++) {
+			if(drogi[i][j].odmiana==Odmiana::miejsceDostepne) drogi[i][j].grafika->rysuj(okno, &przewijanie);
+			//			osady[i][j].grafika->rysuj(okno, &przewijanie);
+			//			porty[i][j].grafika->rysuj(okno, &przewijanie);
+		}
+	}
+	for (int i = 0; i < osady.size(); i++) {
+		for (int j = 0; j < osady[i].size(); j++) {
+			if (osady[i][j].odmiana == Odmiana::miejsceDostepne) osady[i][j].grafika->rysuj(okno, &przewijanie);
+			//			osady[i][j].grafika->rysuj(okno, &przewijanie);
+			//			porty[i][j].grafika->rysuj(okno, &przewijanie);
+		}
+	}
+	for (int i = 0; i < porty.size(); i++) {
+		for (int j = 0; j < porty[i].size(); j++) {
+			if (porty[i][j].odmiana == Odmiana::wybrzeze) porty[i][j].grafika->rysuj(okno, &przewijanie);
+			//			osady[i][j].grafika->rysuj(okno, &przewijanie);
+			//			porty[i][j].grafika->rysuj(okno, &przewijanie);
 		}
 	}
 }

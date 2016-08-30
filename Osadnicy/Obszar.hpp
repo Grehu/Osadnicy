@@ -12,7 +12,8 @@ enum class Odmiana {
 	pustynia,
 	morze,
 	miejsceDostepne,
-	miejsceNiedostepne
+	miejsceNiedostepne, 
+	wybrzeze
 };
 template <class typ>
 struct Obszar{

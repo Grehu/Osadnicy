@@ -24,4 +24,5 @@ enum class Etykieta {
 	droga,
 	urodzaj,
 	zwyciestwo,
+	ciemnosc
 };

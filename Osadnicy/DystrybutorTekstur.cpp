@@ -3,6 +3,7 @@
 
 DystrybutorTekstur::DystrybutorTekstur()
 {
+	dodajTeksture("Grafiki/nothing0.png", Etykieta::ciemnosc);
 	dodajTeksture("Grafiki/board0.png", Etykieta::ramka);
 	dodajTeksture("Grafiki/desert0.png", Etykieta::pustynia);
 	dodajTeksture("Grafiki/lumber0.png", Etykieta::drewno);
@@ -45,6 +46,7 @@ DystrybutorTekstur::DystrybutorTekstur()
 	dodajTeksture("Grafiki/grainCard.png", Etykieta::zbozeKarta);
 	dodajTeksture("Grafiki/stoneCard.png", Etykieta::kamienKarta);
 	dodajTeksture("Grafiki/woolCard.png", Etykieta::welnaKarta);
+	dodajTeksture("Grafiki/road0.png", Etykieta::droga);
 }
 
 Texture * DystrybutorTekstur::pobierzLosowaTeksture(Etykieta etykieta)

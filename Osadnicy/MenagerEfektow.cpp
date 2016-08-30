@@ -11,6 +11,14 @@ void MenagerEfektow::ustawPrzyrosty()
 	przyrostA = (kolory[nastepnyKolor()].a - kolory[numerKoloru].a) / (float)krokiDoCelu;
 }
 
+void MenagerEfektow::ustawPrzyrosty(int pierwszy, int drugi)
+{
+	przyrostR = (kolory[drugi].r - kolory[pierwszy].r) / (float)krokiDoCelu;
+	przyrostG = (kolory[drugi].g - kolory[pierwszy].g) / (float)krokiDoCelu;
+	przyrostB = (kolory[drugi].b - kolory[pierwszy].b) / (float)krokiDoCelu;
+	przyrostA = (kolory[drugi].a - kolory[pierwszy].a) / (float)krokiDoCelu;
+}
+
 MenagerEfektow::MenagerEfektow(Color & poczatkowy, Color & docelowy)
 {
 	dodajKolor(poczatkowy);
@@ -24,8 +32,15 @@ void MenagerEfektow::dodajKolor(Color & kolor)
 	kolory.push_back(kolor);
 }
 
+void MenagerEfektow::resetujKolory()
+{
+	kolory.clear();
+	aktualnyKolor = Color(55, 55, 55, 255);
+}
+
 void MenagerEfektow::mieszaj()
 {
+	ustawPrzyrosty();
 	if (++licznikKrokow < krokiDoCelu) {
 		magazynR += przyrostR;
 		magazynG += przyrostG;
@@ -46,6 +61,23 @@ void MenagerEfektow::mieszaj()
 	}
 	
 }
+
+void MenagerEfektow::popchnij(int aktualny, int docelowy)
+{
+	ustawPrzyrosty(aktualny, docelowy);
+	if (++licznikKrokow < krokiDoCelu) {
+		magazynR += przyrostR;
+		magazynG += przyrostG;
+		magazynB += przyrostB;
+		magazynA += przyrostA;
+		aktualnyKolor = Color((int)(kolory[aktualny].r + magazynR), (int)(kolory[aktualny].g + magazynG), (int)(kolory[aktualny].b + magazynB), (int)(kolory[aktualny].a + magazynA));
+	}
+	else {
+		licznikKrokow = 1000;
+	}
+}
+
+
 
 Color MenagerEfektow::pobierzKolor()
 {

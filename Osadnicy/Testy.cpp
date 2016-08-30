@@ -227,6 +227,7 @@ void Test::testWyswietlania()
 {
 	plansza->wyswietlPlansze(*okno, Ustawienia::przewijanie);
 	hud->wyswietlPanele(*okno);
+	
 }
 
 Text Test::testDystrybutoraCzcionek()

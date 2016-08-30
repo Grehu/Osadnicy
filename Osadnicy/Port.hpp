@@ -8,7 +8,7 @@ private:
 	Osada * klient2;
 
 public:
-	void dodajKlientow(Osada & klient1, Osada & klient2);
+	void dodajKlientow(Osada * klient1, Osada * klient2);
 	void ustawSurowiec(Surowiec surowiec);
 	Towar handel(Towar eksportowany, Surowiec zakup);
 	
