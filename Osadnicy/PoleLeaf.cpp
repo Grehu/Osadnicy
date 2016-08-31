@@ -14,11 +14,11 @@ void PoleLeaf::rysuj(RenderWindow & okno, Vector2f * lokalizacja)
 	RysunekComponent::rysuj(okno, lokalizacja);
 }
 
-Vector2f PoleLeaf::wspolrzedneRogu(int rog)
+/*Vector2f PoleLeaf::wspolrzedneRogu(int rog)
 {
 	CircleShape * ksztalt = (CircleShape*) this->ksztalt;
 	return ksztalt->getPoint(rog);
-}
+}*/
 
 bool PoleLeaf::sprawdzPunkt(RenderWindow & okno)
 {

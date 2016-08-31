@@ -3,7 +3,7 @@
 #include "RysunekComponent.hpp"
 
 using namespace sf;
-
+/*
 enum class Rog {
 	prawyGorny,
 	prawy,
@@ -12,13 +12,13 @@ enum class Rog {
 	lewy,
 	lewyGorny
 };
-
+*/
 class PoleLeaf : public RysunekComponent {
 protected:
 	bool podswietlone;
 	double rozjasnienie = 0.0f;
 public:
 	void rysuj(RenderWindow & okno, Vector2f * lokalizacja);
-	Vector2f wspolrzedneRogu(int rog);
+	/*Vector2f wspolrzedneRogu(int rog);*/
 	bool sprawdzPunkt(RenderWindow & okno);
 };

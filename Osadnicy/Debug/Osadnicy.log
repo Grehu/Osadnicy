@@ -1,15 +1,6 @@
-﻿  LosowaPlanszaBuilder.cpp
+﻿  PoleLeaf.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(247): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(248): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(264): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(265): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(279): warning C4018: '<': signed/unsigned mismatch
-f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(280): warning C4018: '<': signed/unsigned mismatch
-  DystrybutorTekstur.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\poleleaf.cpp(13): warning C4244: 'argument': conversion from 'double' to 'sf::Uint8', possible loss of data
   Generating Code...
   Compiling...
   main.cpp
@@ -21,9 +12,39 @@ f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '
 f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(262): warning C4018: '<': signed/unsigned mismatch
 f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(276): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 f:\visualcppworkspace\osadnicy\osadnicy\testy.cpp(286): warning C4018: '<': signed/unsigned mismatch
+  RysunekComposite.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
   PlanszaBuilder.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+  Plansza.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(7): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(20): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(28): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(36): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(44): warning C4018: '>': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(53): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(55): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(62): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(63): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(69): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(70): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(76): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(77): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(83): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\plansza.cpp(84): warning C4018: '<': signed/unsigned mismatch
+  LosowaPlanszaBuilder.cpp
+f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(20): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(126): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(247): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(248): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(264): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(265): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(279): warning C4018: '<': signed/unsigned mismatch
+f:\visualcppworkspace\osadnicy\osadnicy\losowaplanszabuilder.cpp(280): warning C4018: '<': signed/unsigned mismatch
   Konwerter.cpp
 f:\visualcppworkspace\osadnicy\osadnicy\menagerefektow.hpp(13): warning C4018: '<': signed/unsigned mismatch
 f:\visualcppworkspace\osadnicy\osadnicy\parowanie.hpp(13): warning C4091: 'static ': ignored on left of 'Parowanie' when no variable is declared
